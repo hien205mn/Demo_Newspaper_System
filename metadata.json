@@ -1,0 +1,6 @@
+{
+  "name": "Cổng Tiếp Nhận & Điều Phối Tin Nóng Báo Chí",
+  "description": "Hệ thống tiếp nhận tin nóng từ người dân, chấm điểm tác động Impact Score và quy trình kiểm duyệt điều phối tác nghiệp báo chí đa cấp.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
