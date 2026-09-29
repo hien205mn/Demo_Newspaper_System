@@ -8,16 +8,11 @@
 :root {
 	color-scheme: light;
 	font-family: "Segoe UI", "Segoe UI Variable", Tahoma, sans-serif;
-	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: #f4f6f8;
 	color: #0F172A;
-}
-
-h1 {
-	font-family: Georgia, "Times New Roman", serif;
 }
 
 body {
