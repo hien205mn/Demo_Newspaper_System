@@ -116,9 +116,9 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-fade-in overflow-y-auto">
-      <div className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8 animate-scale-up">
+      <div className="bg-white rounded-lg max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8 animate-scale-up">
         {/* Header */}
-        <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 relative">
+        <div className="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 text-white p-6 relative">
           <button
             onClick={onClose}
             className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition cursor-pointer"
@@ -126,11 +126,11 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
             <X className="w-5 h-5" />
           </button>
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center text-indigo-300 shadow-md">
-              <GraduationCap className="w-7 h-7 text-indigo-400" />
+            <div className="w-12 h-12 rounded-lg bg-slate-500/20 border border-slate-400/40 flex items-center justify-center text-slate-300 shadow-md">
+              <GraduationCap className="w-7 h-7 text-slate-400" />
             </div>
             <div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/30 text-indigo-300 text-[10px] font-bold uppercase tracking-wider border border-indigo-500/40">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-500/30 text-slate-300 text-[10px] font-bold uppercase tracking-wider border border-slate-500/40">
                 <Sparkles className="w-3 h-3" />
                 Đặc Quyền Tác Nghiệp Báo Chí
               </div>
@@ -139,7 +139,7 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
               </h2>
             </div>
           </div>
-          <p className="text-xs text-indigo-200/80 mt-2 leading-relaxed">
+          <p className="text-xs text-slate-200/80 mt-2 leading-relaxed">
             Chuyên gia là vai trò bao trọn toàn bộ tính năng của Người dân (gửi tin, tra cứu, theo dõi dân sinh) đồng thời mở khóa quyền năng <strong>viết bài phân tích chuyên sâu</strong>, <strong>theo dõi tiến độ duyệt bài</strong> và <strong>chỉnh sửa bài viết</strong> trực tiếp với Ban Biên Tập.
           </p>
         </div>
@@ -160,9 +160,9 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
         ) : (
           <form onSubmit={handleQuickApprove} className="p-6 sm:p-7 space-y-5 max-h-[75vh] overflow-y-auto">
             {/* Qualification Banner */}
-            <div className="p-4 bg-indigo-50/80 rounded-2xl border border-indigo-100 flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
-              <div className="text-xs text-indigo-950 leading-relaxed">
+            <div className="p-4 bg-slate-50/80 rounded-lg border border-slate-100 flex items-start gap-3">
+              <ShieldCheck className="w-5 h-5 text-slate-600 shrink-0 mt-0.5" />
+              <div className="text-xs text-slate-950 leading-relaxed">
                 <strong>Quy chuẩn xét duyệt:</strong> Dành cho các học giả, nhà nghiên cứu, luật sư, kỹ sư đầu ngành và các chuyên gia có uy tín xã hội tham gia phản biện chính sách và giải đáp vấn đề dân sinh cùng Tòa soạn.
               </div>
             </div>
@@ -179,19 +179,19 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm font-semibold text-slate-900 bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 focus:border-slate-500 text-sm font-semibold text-slate-900 bg-white"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
-                  <GraduationCap className="w-3.5 h-3.5 text-indigo-600" />
+                  <GraduationCap className="w-3.5 h-3.5 text-slate-600" />
                   Học hàm / Học vị / Chức danh
                 </label>
                 <select
                   value={academicTitle}
                   onChange={(e) => setAcademicTitle(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm font-semibold text-slate-900 bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 focus:border-slate-500 text-sm font-semibold text-slate-900 bg-white"
                 >
                   {ACADEMIC_TITLES.map((t) => (
                     <option key={t} value={t}>
@@ -211,7 +211,7 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
                   required
                   value={organization}
                   onChange={(e) => setOrganization(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm text-slate-900 bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 focus:border-slate-500 text-sm text-slate-900 bg-white"
                   placeholder="Ví dụ: Viện Hàn lâm KH&CN, Đại học Quốc gia..."
                 />
               </div>
@@ -226,7 +226,7 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
                   required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm font-mono text-slate-900 bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 focus:border-slate-500 text-sm font-mono text-slate-900 bg-white"
                 />
               </div>
             </div>
@@ -234,7 +234,7 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
             {/* Field Specialties */}
             <div>
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2 flex items-center gap-1.5">
-                <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+                <BookOpen className="w-3.5 h-3.5 text-slate-600" />
                 Lĩnh vực chuyên môn phản biện (Chọn một hoặc nhiều)
               </label>
               <div className="flex flex-wrap gap-2">
@@ -247,7 +247,7 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
                       onClick={() => toggleField(field)}
                       className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition cursor-pointer flex items-center gap-1.5 ${
                         isSelected
-                          ? 'bg-indigo-600 text-white shadow-sm'
+                          ? 'bg-slate-600 text-white shadow-sm'
                           : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
                       }`}
                     >
@@ -268,7 +268,7 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
                 rows={3}
                 value={bio}
                 onChange={(e) => setBio(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-xs text-slate-800 bg-white"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 focus:border-slate-500 text-xs text-slate-800 bg-white"
                 placeholder="Mô tả các đề tài nghiên cứu, kinh nghiệm cố vấn hoặc các vụ việc dân sinh đã tham gia hỗ trợ..."
               />
             </div>
@@ -283,7 +283,7 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
                 type="url"
                 value={portfolioUrl}
                 onChange={(e) => setPortfolioUrl(e.target.value)}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-xs text-slate-800 font-mono bg-white"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 focus:border-slate-500 text-xs text-slate-800 font-mono bg-white"
                 placeholder="https://..."
               />
             </div>
@@ -300,9 +300,9 @@ export const ExpertApplicationModal: React.FC<ExpertApplicationModalProps> = ({
 
               <button
                 type="submit"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-indigo-900/30 flex items-center justify-center gap-2 transition transform active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-700 hover:from-slate-500 hover:to-slate-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-slate-900/30 flex items-center justify-center gap-2 transition transform active:scale-95 cursor-pointer"
               >
-                <GraduationCap className="w-4 h-4 text-indigo-200" />
+                <GraduationCap className="w-4 h-4 text-slate-200" />
                 <span>PHÊ DUYỆT & CHUYỂN SANG VAI TRÒ CHUYÊN GIA NGAY</span>
               </button>
             </div>

@@ -336,7 +336,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
       case 'EDITING':
         return {
           label: 'Đang Biên Tập & Hiệu Đính',
-          style: 'bg-blue-500/10 text-blue-500 border-blue-500/30',
+          style: 'bg-slate-500/10 text-slate-500 border-slate-500/30',
           icon: <Edit3 className="w-3.5 h-3.5" />,
         };
       case 'REVISION_REQUESTED':
@@ -383,7 +383,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
     <div className="space-y-6 pb-12">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed top-20 right-5 z-50 p-4 bg-slate-900 text-white text-xs font-bold rounded-2xl shadow-2xl border border-indigo-500 flex items-center gap-3 animate-fade-in">
+        <div className="fixed top-20 right-5 z-50 p-4 bg-slate-900 text-white text-xs font-bold rounded-lg shadow-2xl border border-slate-500 flex items-center gap-3 animate-fade-in">
           <Sparkles className="w-4 h-4 text-amber-400" />
           <span>{toastMessage}</span>
           <button 
@@ -396,17 +396,17 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
       )}
 
       {/* TOP HEADER: ROLE HERO & DUAL FUNCTION MODE BAR */}
-      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-indigo-900/40 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 text-white rounded-lg p-6 sm:p-8 shadow-xl border border-slate-900/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-slate-600/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-950/60 shrink-0 border border-indigo-300/30">
+            <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-slate-500 to-slate-600 flex items-center justify-center text-white shadow-lg shadow-slate-950/60 shrink-0 border border-slate-300/30">
               <GraduationCap className="w-9 h-9" />
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-indigo-500/30 text-indigo-300 border border-indigo-400/40">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-500/30 text-slate-300 border border-slate-400/40">
                   VAI TRÒ CHUYÊN GIA BÁO CHÍ
                 </span>
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30 flex items-center gap-1">
@@ -417,7 +417,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
               <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white mt-1">
                 KHÔNG GIAN TÁC NGHIỆP CHUYÊN GIA
               </h1>
-              <p className="text-xs text-indigo-200/80 mt-1 max-w-2xl leading-relaxed">
+              <p className="text-xs text-slate-200/80 mt-1 max-w-2xl leading-relaxed">
                 Bao trọn toàn bộ tính năng của <strong>Người dân</strong> (gửi tin nóng, tra cứu hồ sơ, theo dõi dân sinh) kết hợp công cụ chuyên sâu: <strong>Viết bài phản biện</strong>, <strong>Theo dõi tiến độ duyệt bài</strong> và <strong>Chỉnh sửa bài viết</strong> cùng Ban Biên Tập.
               </p>
             </div>
@@ -427,9 +427,9 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
           <div className="flex flex-wrap items-center gap-2.5 self-stretch md:self-auto">
             <button
               onClick={handleResetNewArticleForm}
-              className="flex-1 md:flex-initial px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-indigo-950/50 flex items-center justify-center gap-2 transition transform active:scale-95 cursor-pointer"
+              className="flex-1 md:flex-initial px-4 py-3 bg-gradient-to-r from-slate-600 to-slate-600 hover:from-slate-500 hover:to-slate-500 text-white rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-slate-950/50 flex items-center justify-center gap-2 transition transform active:scale-95 cursor-pointer"
             >
-              <PenTool className="w-4 h-4 text-indigo-200" />
+              <PenTool className="w-4 h-4 text-slate-200" />
               <span>✍️ Viết Bài Mới</span>
             </button>
 
@@ -451,13 +451,13 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
             onClick={() => setMainTab('WORKSPACE')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer ${
               mainTab === 'WORKSPACE'
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-950/50'
+                ? 'bg-slate-600 text-white shadow-md shadow-slate-950/50'
                 : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-700/60'
             }`}
           >
-            <BookOpen className="w-4 h-4 text-indigo-300" />
+            <BookOpen className="w-4 h-4 text-slate-300" />
             <span>1. Tác Nghiệp Chuyên Gia (Viết • Theo Dõi • Chỉnh Sửa)</span>
-            <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-indigo-900 text-indigo-200 font-mono">
+            <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-slate-900 text-slate-200 font-mono">
               {expertArticles.length} bài
             </span>
           </button>
@@ -504,7 +504,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
       {mainTab === 'WORKSPACE' && (
         <div className="space-y-6 animate-fade-in">
           {/* Sub Navigation Bar for the 3 Core Capabilities */}
-          <div className="bg-white rounded-2xl p-2.5 border border-slate-200 shadow-sm flex flex-wrap items-center justify-between gap-3">
+          <div className="bg-white rounded-lg p-2.5 border border-slate-200 shadow-sm flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2">
               <button
                 onClick={() => setWorkspaceSubTab('TRACK')}
@@ -514,7 +514,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                     : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                 }`}
               >
-                <Layers className="w-4 h-4 text-indigo-400" />
+                <Layers className="w-4 h-4 text-slate-400" />
                 <span>Theo Dõi Bài Viết ({expertArticles.length})</span>
                 {revisionCount > 0 && (
                   <span className="px-1.5 py-0.5 rounded-full text-[10px] font-black bg-rose-500 text-white animate-pulse">
@@ -527,7 +527,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                 onClick={handleResetNewArticleForm}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer ${
                   workspaceSubTab === 'WRITE'
-                    ? 'bg-indigo-600 text-white shadow-sm'
+                    ? 'bg-slate-600 text-white shadow-sm'
                     : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                 }`}
               >
@@ -542,14 +542,14 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                 }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer ${
                   workspaceSubTab === 'EDIT'
-                    ? 'bg-purple-600 text-white shadow-sm'
+                    ? 'bg-slate-600 text-white shadow-sm'
                     : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                 }`}
               >
-                <Edit3 className="w-4 h-4 text-purple-400" />
+                <Edit3 className="w-4 h-4 text-slate-400" />
                 <span>Chỉnh Sửa Bài Viết</span>
                 {articleForm.id && (
-                  <span className="text-[10px] text-purple-200 font-mono">
+                  <span className="text-[10px] text-slate-200 font-mono">
                     ({articleForm.code || 'Bản thảo'})
                   </span>
                 )}
@@ -573,7 +573,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
             <div className="space-y-6">
               {/* Stats Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-1">
+                <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-1">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
                     Tổng bài đóng góp
                   </div>
@@ -585,7 +585,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                   </div>
                 </div>
 
-                <div className="bg-white p-4 rounded-2xl border border-amber-200 bg-amber-50/40 shadow-sm space-y-1">
+                <div className="bg-white p-4 rounded-lg border border-amber-200 bg-amber-50/40 shadow-sm space-y-1">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-amber-700">
                     Chờ BTV thẩm định
                   </div>
@@ -597,7 +597,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                   </div>
                 </div>
 
-                <div className="bg-white p-4 rounded-2xl border border-rose-200 bg-rose-50/40 shadow-sm space-y-1">
+                <div className="bg-white p-4 rounded-lg border border-rose-200 bg-rose-50/40 shadow-sm space-y-1">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-rose-700">
                     BTV yêu cầu chỉnh sửa
                   </div>
@@ -609,7 +609,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                   </div>
                 </div>
 
-                <div className="bg-white p-4 rounded-2xl border border-emerald-200 bg-emerald-50/40 shadow-sm space-y-1">
+                <div className="bg-white p-4 rounded-lg border border-emerald-200 bg-emerald-50/40 shadow-sm space-y-1">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-700">
                     Đã xuất bản lên báo
                   </div>
@@ -623,7 +623,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
               </div>
 
               {/* Filters Bar: Lọc nhiệm vụ thành từng loại & lọc theo trạng thái */}
-              <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+              <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-3">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
                   {/* Search box */}
                   <div className="relative flex-1">
@@ -633,7 +633,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Tìm bài viết theo tiêu đề, mã bài, chuyên mục, từ khóa..."
-                      className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white"
+                      className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:bg-white"
                     />
                   </div>
 
@@ -656,14 +656,14 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                 {/* Filter Row 1: Lọc theo chuyên mục / loại bài viết */}
                 <div className="flex items-center gap-2 overflow-x-auto pb-1">
                   <div className="text-xs font-bold text-slate-500 whitespace-nowrap flex items-center gap-1">
-                    <Filter className="w-3.5 h-3.5 text-indigo-500" />
+                    <Filter className="w-3.5 h-3.5 text-slate-500" />
                     <span>Chuyên mục:</span>
                   </div>
                   <button
                     onClick={() => setCategoryFilter('ALL')}
                     className={`px-3 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition cursor-pointer ${
                       categoryFilter === 'ALL'
-                        ? 'bg-indigo-600 text-white'
+                        ? 'bg-slate-600 text-white'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
@@ -677,7 +677,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                         onClick={() => setCategoryFilter(cat)}
                         className={`px-3 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition cursor-pointer ${
                           categoryFilter === cat
-                            ? 'bg-indigo-600 text-white'
+                            ? 'bg-slate-600 text-white'
                             : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                         }`}
                       >
@@ -731,7 +731,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                   </div>
 
                   {filteredExpertArticles.length === 0 ? (
-                    <div className="bg-white p-8 rounded-2xl border border-slate-200 text-center space-y-3">
+                    <div className="bg-white p-8 rounded-lg border border-slate-200 text-center space-y-3">
                       <FileText className="w-10 h-10 text-slate-300 mx-auto" />
                       <p className="text-sm font-bold text-slate-700">
                         Không tìm thấy bài viết phù hợp
@@ -741,7 +741,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                       </p>
                       <button
                         onClick={handleResetNewArticleForm}
-                        className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition cursor-pointer"
+                        className="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition cursor-pointer"
                       >
                         + Khởi tạo bài viết mới
                       </button>
@@ -756,10 +756,10 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                         <div
                           key={art.id}
                           onClick={() => setSelectedArticleId(art.id)}
-                          className={`p-4 rounded-2xl border transition cursor-pointer space-y-2.5 ${
+                          className={`p-4 rounded-lg border transition cursor-pointer space-y-2.5 ${
                             isSelected
-                              ? 'bg-indigo-50/70 border-indigo-500 shadow-md ring-1 ring-indigo-500/30'
-                              : 'bg-white border-slate-200 hover:border-indigo-300 hover:shadow-sm'
+                              ? 'bg-slate-50/70 border-slate-500 shadow-md ring-1 ring-slate-500/30'
+                              : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-sm'
                           }`}
                         >
                           <div className="flex items-center justify-between gap-2">
@@ -793,7 +793,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                           )}
 
                           <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-100">
-                            <span className="text-indigo-600 font-semibold">{art.category}</span>
+                            <span className="text-slate-600 font-semibold">{art.category}</span>
                             <span>{art.submittedAt}</span>
                           </div>
                         </div>
@@ -805,11 +805,11 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                 {/* Right: Active Article Tracking Detail (7 cols) */}
                 <div className="lg:col-span-7">
                   {activeArticle ? (
-                    <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 shadow-sm space-y-6 sticky top-24">
+                    <div className="bg-white rounded-lg border border-slate-200 p-6 sm:p-7 shadow-sm space-y-6 sticky top-24">
                       {/* Top Action Bar */}
                       <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100">
                         <div className="flex items-center gap-2">
-                          <span className="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-indigo-100 text-indigo-800">
+                          <span className="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-slate-100 text-slate-800">
                             {activeArticle.code}
                           </span>
                           <span
@@ -826,7 +826,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => handleStartEditArticle(activeArticle)}
-                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm transition cursor-pointer"
+                            className="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm transition cursor-pointer"
                           >
                             <Edit3 className="w-3.5 h-3.5" />
                             <span>Chỉnh Sửa Bài Viết Này</span>
@@ -836,7 +836,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
 
                       {/* Editorial Directive / Revision Box */}
                       {activeArticle.status === 'REVISION_REQUESTED' && (
-                        <div className="p-4 rounded-2xl bg-rose-50 border border-rose-300 text-rose-900 space-y-2">
+                        <div className="p-4 rounded-lg bg-rose-50 border border-rose-300 text-rose-900 space-y-2">
                           <div className="flex items-center justify-between">
                             <span className="font-bold text-xs uppercase tracking-wide flex items-center gap-1.5 text-rose-800">
                               <AlertCircle className="w-4 h-4 text-rose-600" />
@@ -857,19 +857,19 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
 
                       {/* Article Headline & Sapo */}
                       <div className="space-y-3">
-                        <div className="inline-block text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">
+                        <div className="inline-block text-xs font-bold text-slate-600 bg-slate-50 px-2.5 py-1 rounded-md">
                           {activeArticle.category}
                         </div>
                         <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
                           {activeArticle.title}
                         </h2>
-                        <p className="text-xs sm:text-sm text-slate-600 italic bg-slate-50 p-3.5 rounded-xl border-l-4 border-indigo-500 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-slate-600 italic bg-slate-50 p-3.5 rounded-xl border-l-4 border-slate-500 leading-relaxed">
                           "{activeArticle.sapo}"
                         </p>
                       </div>
 
                       {/* Metadata Details & Workflow Tracking */}
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 p-3.5 bg-slate-50 rounded-2xl border border-slate-200 text-xs">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 p-3.5 bg-slate-50 rounded-lg border border-slate-200 text-xs">
                         <div>
                           <span className="text-slate-400 block text-[10px] uppercase font-bold">
                             Chuyên gia tác giả
@@ -888,7 +888,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                           <span className="text-slate-400 block text-[10px] uppercase font-bold">
                             Điểm Fact-Check AI
                           </span>
-                          <span className="font-mono font-bold text-indigo-600">
+                          <span className="font-mono font-bold text-slate-600">
                             {activeArticle.factCheckScore || 98}/100đ
                           </span>
                         </div>
@@ -899,7 +899,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                         <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">
                           Nội dung toàn văn bài viết:
                         </h4>
-                        <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-800 leading-relaxed whitespace-pre-line max-h-72 overflow-y-auto">
+                        <div className="p-4 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-800 leading-relaxed whitespace-pre-line max-h-72 overflow-y-auto">
                           {activeArticle.content}
                         </div>
                       </div>
@@ -931,7 +931,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                       )}
                     </div>
                   ) : (
-                    <div className="bg-white rounded-3xl border border-slate-200 p-8 text-center text-slate-500">
+                    <div className="bg-white rounded-lg border border-slate-200 p-8 text-center text-slate-500">
                       Chọn một bài viết để xem chi tiết
                     </div>
                   )}
@@ -942,11 +942,11 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
 
           {/* SUB-TAB 2 & 3: FORM VIẾT BÀI / CHỈNH SỬA BÀI VIẾT */}
           {(workspaceSubTab === 'WRITE' || workspaceSubTab === 'EDIT') && (
-            <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+            <div className="bg-white rounded-lg border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
               {/* Form Title & Context Banner */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-200">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-indigo-50 text-indigo-700 border border-indigo-200">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase bg-slate-50 text-slate-700 border border-slate-200">
                     {workspaceSubTab === 'WRITE' ? '✍️ KHỞI TẠO BÀI VIẾT MỚI' : '🛠️ HIỆU ĐÍNH & CHỈNH SỬA BÀI VIẾT'}
                   </div>
                   <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-1">
@@ -971,7 +971,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                   </button>
                   <button
                     onClick={() => handleSaveArticle(false)}
-                    className="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-indigo-950/30 flex items-center gap-1.5 transition cursor-pointer"
+                    className="px-5 py-2.5 bg-gradient-to-r from-slate-600 to-slate-600 hover:from-slate-500 hover:to-slate-500 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-slate-950/30 flex items-center gap-1.5 transition cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>
@@ -983,7 +983,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
 
               {/* If editing and has editor note, show prominently */}
               {workspaceSubTab === 'EDIT' && (articleForm.revisionRequestNote || articleForm.editorNote) && (
-                <div className="p-4 rounded-2xl bg-amber-50 border border-amber-300 text-amber-950 space-y-1.5">
+                <div className="p-4 rounded-lg bg-amber-50 border border-amber-300 text-amber-950 space-y-1.5">
                   <div className="flex items-center gap-2 font-bold text-xs uppercase tracking-wide text-amber-800">
                     <AlertCircle className="w-4 h-4 text-amber-600" />
                     <span>Ý KIẾN / HƯỚNG DẪN CỦA BAN BIÊN TẬP CẦN ĐIỀU CHỈNH:</span>
@@ -1005,7 +1005,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                     <select
                       value={articleForm.category}
                       onChange={(e) => setArticleForm({ ...articleForm, category: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-xs font-semibold text-slate-900 bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 text-xs font-semibold text-slate-900 bg-white"
                     >
                       {EXPERT_CATEGORIES.map((cat) => (
                         <option key={cat} value={cat}>
@@ -1022,7 +1022,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                     <select
                       value={articleForm.relatedSubmissionCode}
                       onChange={(e) => setArticleForm({ ...articleForm, relatedSubmissionCode: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-xs font-mono text-slate-900 bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 text-xs font-mono text-slate-900 bg-white"
                     >
                       <option value="">-- Không liên kết --</option>
                       {submissions.map((sub) => (
@@ -1042,7 +1042,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                       value={articleForm.tagsInput}
                       onChange={(e) => setArticleForm({ ...articleForm, tagsInput: e.target.value })}
                       placeholder="Quy hoạch, Sạt lở, Thủy văn..."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-xs text-slate-900 bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 text-xs text-slate-900 bg-white"
                     />
                   </div>
                 </div>
@@ -1058,7 +1058,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                     value={articleForm.title}
                     onChange={(e) => setArticleForm({ ...articleForm, title: e.target.value })}
                     placeholder="Ví dụ: Đánh giá nguy cơ sạt lở chuỗi đèo Tây Nguyên và khuyến nghị công nghệ cảnh báo sớm..."
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-sm font-bold text-slate-900 bg-white"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 text-sm font-bold text-slate-900 bg-white"
                   />
                 </div>
 
@@ -1073,7 +1073,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                     value={articleForm.sapo}
                     onChange={(e) => setArticleForm({ ...articleForm, sapo: e.target.value })}
                     placeholder="Tóm tắt luận điểm cốt lõi, vấn đề trọng tâm và giải pháp đề xuất của chuyên gia (khoảng 2-3 câu)..."
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-xs sm:text-sm text-slate-800 bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-500 text-xs sm:text-sm text-slate-800 bg-white"
                   />
                 </div>
 
@@ -1091,15 +1091,15 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                     value={articleForm.content}
                     onChange={(e) => setArticleForm({ ...articleForm, content: e.target.value })}
                     placeholder="Trình bày chi tiết phân tích chuyên môn, bối cảnh thực địa, nguyên nhân căn cơ, so sánh mô hình quốc tế và kiến nghị chính sách cụ thể..."
-                    className="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-xs sm:text-sm text-slate-900 font-mono leading-relaxed bg-white"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-slate-500 text-xs sm:text-sm text-slate-900 font-mono leading-relaxed bg-white"
                   />
                 </div>
 
                 {/* Image & Evidence attachment */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
                   <div>
                     <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1 flex items-center gap-1.5">
-                      <Paperclip className="w-3.5 h-3.5 text-indigo-600" />
+                      <Paperclip className="w-3.5 h-3.5 text-slate-600" />
                       URL hình ảnh minh họa / sơ đồ phân tích
                     </label>
                     <input
@@ -1125,9 +1125,9 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                 </div>
 
                 {/* Author Metadata Footer */}
-                <div className="p-4 bg-indigo-50/60 rounded-2xl border border-indigo-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+                <div className="p-4 bg-slate-50/60 rounded-lg border border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-slate-600 text-white font-bold flex items-center justify-center shrink-0">
                       <GraduationCap className="w-5 h-5" />
                     </div>
                     <div>
@@ -1147,7 +1147,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
                     <button
                       type="button"
                       onClick={() => handleSaveArticle(false)}
-                      className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl font-bold shadow-md shadow-indigo-950/30 flex items-center gap-2 transition cursor-pointer"
+                      className="px-6 py-2.5 bg-gradient-to-r from-slate-600 to-slate-600 hover:from-slate-500 hover:to-slate-500 text-white rounded-xl font-bold shadow-md shadow-slate-950/30 flex items-center gap-2 transition cursor-pointer"
                     >
                       <Send className="w-4 h-4" />
                       <span>{workspaceSubTab === 'WRITE' ? 'Nộp bài lên BTV' : 'Cập nhật & Nộp lại'}</span>
@@ -1163,7 +1163,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
       {/* VIEW 2: CỔNG THÔNG TIN DÂN SINH (TOÀN VẸN CHỨC NĂNG NGƯỜI DÂN) */}
       {mainTab === 'CITIZEN_PORTAL' && (
         <div className="space-y-4 animate-fade-in">
-          <div className="p-3 bg-red-50 border border-red-200 text-red-900 rounded-2xl flex items-center justify-between text-xs font-semibold">
+          <div className="p-3 bg-red-50 border border-red-200 text-red-900 rounded-lg flex items-center justify-between text-xs font-semibold">
             <span className="flex items-center gap-2">
               <Globe className="w-4 h-4 text-red-600" />
               Bạn đang trải nghiệm giao diện Cổng Dân Sinh dưới tư cách Chuyên gia được công nhận
@@ -1193,7 +1193,7 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
       {/* VIEW 3: GỬI TIN PHẢN ÁNH DÂN SINH (FORM CHẤM ĐIỂM IMPACT SCORE) */}
       {mainTab === 'CITIZEN_SUBMIT' && (
         <div className="space-y-4 animate-fade-in">
-          <div className="p-3 bg-red-50 border border-red-200 text-red-900 rounded-2xl flex items-center justify-between text-xs font-semibold">
+          <div className="p-3 bg-red-50 border border-red-200 text-red-900 rounded-lg flex items-center justify-between text-xs font-semibold">
             <span className="flex items-center gap-2">
               <Flame className="w-4 h-4 text-red-600" />
               Gửi tin phản ánh hiện trường trực tiếp từ tư cách Chuyên Gia cộng đồng
@@ -1220,14 +1220,14 @@ export const ExpertDesk: React.FC<ExpertDeskProps> = ({
       {/* VIEW 4: HỒ SƠ & CHỨNG NHẬN CHUYÊN GIA */}
       {mainTab === 'EXPERT_PROFILE' && (
         <div className="space-y-6 animate-fade-in">
-          <div className="p-3 bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-2xl flex items-center justify-between text-xs font-semibold">
+          <div className="p-3 bg-slate-50 border border-slate-200 text-slate-900 rounded-lg flex items-center justify-between text-xs font-semibold">
             <span className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-indigo-600" />
+              <Award className="w-4 h-4 text-slate-600" />
               Hồ sơ học thuật & Chứng chỉ chuyên gia được cấp bởi Tòa Soạn Báo Dân Sinh
             </span>
             <button
               onClick={() => setMainTab('WORKSPACE')}
-              className="px-3 py-1 bg-indigo-600 text-white rounded-lg text-xs font-bold hover:bg-indigo-700 transition cursor-pointer"
+              className="px-3 py-1 bg-slate-600 text-white rounded-lg text-xs font-bold hover:bg-slate-700 transition cursor-pointer"
             >
               ← Về Bàn Tác Nghiệp Chuyên Gia
             </button>

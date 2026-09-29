@@ -32,7 +32,7 @@ export const SubmissionDetailModal: React.FC<SubmissionDetailModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 space-y-6 max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-lg max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 space-y-6 max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="flex items-start justify-between gap-4 pb-4 border-b border-slate-100">
           <div>
@@ -94,10 +94,10 @@ export const SubmissionDetailModal: React.FC<SubmissionDetailModalProps> = ({
             Chi Tiết Thang Điểm Tác Động (Impact Score Matrix)
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
-            <div className="p-2.5 bg-blue-50 rounded-lg border border-blue-100">
-              <span className="text-[10px] text-blue-600 font-bold block">1. KHU VỰC (SCOPE)</span>
+            <div className="p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+              <span className="text-[10px] text-slate-600 font-bold block">1. KHU VỰC (SCOPE)</span>
               <strong className="text-slate-900">{submission.locationScope.label}</strong>
-              <div className="text-blue-700 font-mono font-bold mt-1">+{submission.locationScope.score} điểm</div>
+              <div className="text-slate-700 font-mono font-bold mt-1">+{submission.locationScope.score} điểm</div>
             </div>
             <div className="p-2.5 bg-amber-50 rounded-lg border border-amber-100">
               <span className="text-[10px] text-amber-700 font-bold block">2. DÂN SỐ ẢNH HƯỞNG</span>
@@ -133,10 +133,10 @@ export const SubmissionDetailModal: React.FC<SubmissionDetailModalProps> = ({
 
         {/* Article Draft (if written) */}
         {submission.articleDraft && (
-          <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+          <div className="p-5 bg-slate-50 rounded-lg border border-slate-200 space-y-3">
             <div className="flex items-center justify-between pb-2 border-b border-slate-200">
               <span className="text-xs font-bold text-slate-800 uppercase flex items-center gap-1.5">
-                <FileText className="w-4 h-4 text-purple-600" />
+                <FileText className="w-4 h-4 text-slate-600" />
                 Bài Báo Đã Được Biên Tập & Xuất Bản
               </span>
               <span className="text-xs text-slate-500">
@@ -148,7 +148,7 @@ export const SubmissionDetailModal: React.FC<SubmissionDetailModalProps> = ({
               {submission.articleDraft.title}
             </h3>
 
-            <p className="text-xs font-medium text-slate-700 italic border-l-3 border-purple-500 pl-3 leading-relaxed">
+            <p className="text-xs font-medium text-slate-700 italic border-l-3 border-slate-500 pl-3 leading-relaxed">
               {submission.articleDraft.sapo}
             </p>
 
@@ -173,9 +173,9 @@ export const SubmissionDetailModal: React.FC<SubmissionDetailModalProps> = ({
 
         {/* AI Review Summary */}
         {submission.aiReview && (
-          <div className="p-4 bg-purple-50 rounded-xl border border-purple-200 text-xs space-y-1.5">
-            <div className="font-bold text-purple-900 flex items-center gap-1.5">
-              <Bot className="w-4 h-4 text-purple-600" />
+          <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs space-y-1.5">
+            <div className="font-bold text-slate-900 flex items-center gap-1.5">
+              <Bot className="w-4 h-4 text-slate-600" />
               <span>Đánh giá từ AI Tòa soạn (Gemini Flash): Độ tin cậy {submission.aiReview.factualConsistencyScore}%</span>
             </div>
             <p className="text-slate-700">{submission.aiReview.summary}</p>

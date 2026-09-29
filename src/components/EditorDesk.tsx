@@ -424,7 +424,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
     <div className="space-y-6 pb-12">
       {/* Toast Notification */}
       {actionToast && (
-        <div className="p-4 bg-emerald-600 text-white rounded-2xl shadow-xl flex items-center justify-between text-xs font-bold animate-fade-in border border-emerald-400">
+        <div className="p-4 bg-emerald-600 text-white rounded-lg shadow-xl flex items-center justify-between text-xs font-bold animate-fade-in border border-emerald-400">
           <div className="flex items-center gap-2.5">
             <CheckCircle2 className="w-5 h-5 text-emerald-200 shrink-0" />
             <span>{actionToast}</span>
@@ -440,7 +440,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
       )}
 
       {/* 3 DEDICATED SCREENS NAVIGATION */}
-      <div className="bg-slate-900 text-white rounded-3xl p-3 border border-slate-800 shadow-xl">
+      <div className="bg-slate-900 text-white rounded-lg p-3 border border-slate-800 shadow-xl">
         <div className="flex items-center justify-between px-2 pb-2.5 mb-2 border-b border-slate-800/80">
           <div className="flex items-center gap-2">
             <span className="text-xs font-black uppercase tracking-wider text-amber-400">
@@ -466,7 +466,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
           <button
             type="button"
             onClick={() => setActiveScreen('CITIZEN_SUBMISSIONS')}
-            className={`p-3.5 rounded-2xl transition-all cursor-pointer flex items-center gap-3 text-left ${
+            className={`p-3.5 rounded-lg transition-all cursor-pointer flex items-center gap-3 text-left ${
               activeScreen === 'CITIZEN_SUBMISSIONS'
                 ? 'bg-red-600 text-white shadow-lg shadow-red-950/50 ring-2 ring-red-400/40'
                 : 'bg-slate-800/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
@@ -498,7 +498,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
           <button
             type="button"
             onClick={() => setActiveScreen('CTV_ARTICLES')}
-            className={`p-3.5 rounded-2xl transition-all cursor-pointer flex items-center gap-3 text-left ${
+            className={`p-3.5 rounded-lg transition-all cursor-pointer flex items-center gap-3 text-left ${
               activeScreen === 'CTV_ARTICLES'
                 ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-950/50 ring-2 ring-emerald-400/40'
                 : 'bg-slate-800/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
@@ -530,14 +530,14 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
           <button
             type="button"
             onClick={() => setActiveScreen('EXPERT_ARTICLES')}
-            className={`p-3.5 rounded-2xl transition-all cursor-pointer flex items-center gap-3 text-left ${
+            className={`p-3.5 rounded-lg transition-all cursor-pointer flex items-center gap-3 text-left ${
               activeScreen === 'EXPERT_ARTICLES'
-                ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-950/50 ring-2 ring-indigo-400/40'
+                ? 'bg-slate-600 text-white shadow-lg shadow-slate-950/50 ring-2 ring-slate-400/40'
                 : 'bg-slate-800/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
             }`}
           >
             <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
-              activeScreen === 'EXPERT_ARTICLES' ? 'bg-indigo-700 text-white' : 'bg-slate-700/80 text-indigo-400'
+              activeScreen === 'EXPERT_ARTICLES' ? 'bg-slate-700 text-white' : 'bg-slate-700/80 text-slate-400'
             }`}>
               <GraduationCap className="w-5 h-5" />
             </div>
@@ -547,7 +547,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                   3. Bài Chuyên Gia
                 </span>
                 <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-black ${
-                  activeScreen === 'EXPERT_ARTICLES' ? 'bg-indigo-800 text-white' : 'bg-slate-700 text-indigo-300'
+                  activeScreen === 'EXPERT_ARTICLES' ? 'bg-slate-800 text-white' : 'bg-slate-700 text-slate-300'
                 }`}>
                   {expertArticlesCount}
                 </span>
@@ -582,16 +582,16 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
       {activeScreen === 'CITIZEN_SUBMISSIONS' && (
         <>
           {/* Header Banner */}
-          <div className="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-md">
+          <div className="bg-slate-900 text-white rounded-lg p-6 border border-slate-800 shadow-md">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-lg">
+            <div className="w-12 h-12 rounded-xl bg-slate-600 flex items-center justify-center text-white shadow-lg">
               <UserCheck className="w-6 h-6" />
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <h1 className="text-xl sm:text-2xl font-black">BÀN BIÊN TẬP VIÊN (BTV DESK)</h1>
-                <span className="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold border border-blue-500/30">
+                <span className="px-2 py-0.5 rounded bg-slate-500/20 text-slate-300 text-[10px] font-bold border border-slate-500/30">
                   QUY TRÌNH BIÊN TẬP
                 </span>
                 {onOpenEditProfile && (
@@ -670,8 +670,8 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
               }}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
                 levelFilter === 'LOW'
-                  ? 'bg-blue-600 text-white ring-2 ring-blue-400/50'
-                  : 'text-blue-300 hover:bg-slate-700 hover:text-white'
+                  ? 'bg-slate-600 text-white ring-2 ring-slate-400/50'
+                  : 'text-slate-300 hover:bg-slate-700 hover:text-white'
               }`}
             >
               <span>LOW ({lowCount})</span>
@@ -696,7 +696,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
         {/* LEFT COLUMN: Submissions List */}
         <div className="lg:col-span-4 space-y-3">
           {/* Level Filter Bar dedicated for Danh Sách Tin Phản Ánh */}
-          <div className="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold text-slate-900 uppercase tracking-wide">
@@ -716,7 +716,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                   type="button"
                   onClick={() => setLevelFilter('ALL')}
                   className={`text-[10px] font-semibold cursor-pointer ${
-                    levelFilter === 'ALL' ? 'text-blue-600 font-bold underline' : 'text-slate-400 hover:text-slate-700'
+                    levelFilter === 'ALL' ? 'text-slate-600 font-bold underline' : 'text-slate-400 hover:text-slate-700'
                   }`}
                 >
                   Xem tất cả ({submissions.length})
@@ -797,12 +797,12 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                   }}
                   className={`py-2 px-1 rounded-lg text-center font-extrabold text-[11px] transition cursor-pointer flex flex-col items-center justify-center gap-0.5 ${
                     levelFilter === 'LOW'
-                      ? 'bg-blue-600 text-white shadow-md shadow-blue-900/30'
-                      : 'text-slate-700 hover:bg-white/80 hover:text-blue-600'
+                      ? 'bg-slate-600 text-white shadow-md shadow-slate-900/30'
+                      : 'text-slate-700 hover:bg-white/80 hover:text-slate-600'
                   }`}
                 >
                   <span className="text-[10px]">LOW</span>
-                  <span className={`text-[10px] font-mono font-bold ${levelFilter === 'LOW' ? 'text-blue-100' : 'text-slate-500'}`}>
+                  <span className={`text-[10px] font-mono font-bold ${levelFilter === 'LOW' ? 'text-slate-100' : 'text-slate-500'}`}>
                     {lowCount} tin
                   </span>
                 </button>
@@ -857,7 +857,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
 
           <div className="space-y-2.5 max-h-[720px] overflow-y-auto pr-1">
             {filteredList.length === 0 ? (
-              <div className="p-8 bg-white rounded-2xl border border-slate-200 text-center text-slate-500 space-y-3">
+              <div className="p-8 bg-white rounded-lg border border-slate-200 text-center text-slate-500 space-y-3">
                 <p className="text-xs">Không có tin phản ánh nào phù hợp bộ lọc.</p>
                 <button
                   type="button"
@@ -894,7 +894,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                   }}
                   className={`p-3.5 rounded-xl border transition-all cursor-pointer relative ${
                     isSelected
-                      ? 'bg-white border-blue-500 ring-2 ring-blue-500/20 shadow-md'
+                      ? 'bg-white border-slate-500 ring-2 ring-slate-500/20 shadow-md'
                       : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
                   }`}
                 >
@@ -932,7 +932,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
         {/* RIGHT COLUMN: Active Submission Workspace */}
         <div className="lg:col-span-8">
           {selectedSub ? (
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-6">
+            <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-6 space-y-6">
               {/* Submission Header Card */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
                 <div>
@@ -994,7 +994,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
 
               {/* URGENT BANNER: CTV SUBMITTED VERIFICATION WITH PHOTOS/VIDEOS -> WAITING FOR BTV APPROVAL */}
               {selectedSub.stage === 'FIELD_VERIFIED' && (
-                <div className="p-4 bg-gradient-to-r from-emerald-50 via-teal-50 to-blue-50 border-2 border-emerald-400 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md animate-fade-in">
+                <div className="p-4 bg-gradient-to-r from-emerald-50 via-teal-50 to-slate-50 border-2 border-emerald-400 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md animate-fade-in">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow">
                       <Film className="w-5 h-5 animate-pulse" />
@@ -1032,11 +1032,11 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                   onClick={() => setEditorSubView('VERIFY_SENDER')}
                   className={`pb-3 px-4 border-b-2 transition flex items-center gap-2 cursor-pointer ${
                     editorSubView === 'VERIFY_SENDER'
-                      ? 'border-blue-600 text-blue-600'
+                      ? 'border-slate-600 text-slate-600'
                       : 'border-transparent text-slate-500 hover:text-slate-800'
                   }`}
                 >
-                  <span className="w-4 h-4 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[10px]">1</span>
+                  <span className="w-4 h-4 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-[10px]">1</span>
                   <span>Xem Người Gửi, Xác Nhận & Báo Cáo</span>
                   {selectedSub.senderConfirmedAt && (
                     <Check className="w-3.5 h-3.5 text-emerald-600" />
@@ -1049,11 +1049,11 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                     onClick={() => setEditorSubView('COORDINATE_CTV')}
                     className={`pb-3 px-4 border-b-2 transition flex items-center gap-2 cursor-pointer ${
                       editorSubView === 'COORDINATE_CTV'
-                        ? 'border-blue-600 text-blue-600'
+                        ? 'border-slate-600 text-slate-600'
                         : 'border-transparent text-slate-500 hover:text-slate-800'
                     }`}
                   >
-                    <span className="w-4 h-4 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[10px]">2</span>
+                    <span className="w-4 h-4 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-[10px]">2</span>
                     <span>Screen Điều Phối CTV (2 Nút Lựa Chọn)</span>
                     {selectedSub.fieldAssignment && (
                       <Check className="w-3.5 h-3.5 text-emerald-600" />
@@ -1091,11 +1091,11 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                     onClick={() => setEditorSubView('ARTICLE_STAGE')}
                     className={`pb-3 px-4 border-b-2 transition flex items-center gap-2 cursor-pointer ${
                       editorSubView === 'ARTICLE_STAGE'
-                        ? 'border-blue-600 text-blue-600 font-bold'
+                        ? 'border-slate-600 text-slate-600 font-bold'
                         : 'border-transparent text-slate-500 hover:text-slate-800'
                     }`}
                   >
-                    <span className="w-4 h-4 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-[10px]">4</span>
+                    <span className="w-4 h-4 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-[10px]">4</span>
                     <span>Thẩm Định Bài Viết CTV & AI Review</span>
                   </button>
                 )}
@@ -1106,10 +1106,10 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
               {/* ========================================================================= */}
               {editorSubView === 'VERIFY_SENDER' && (
                 <div className="space-y-5 animate-fade-in">
-                  <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+                  <div className="p-5 rounded-lg bg-slate-50 border border-slate-200 space-y-4">
                     <div className="flex items-center justify-between pb-3 border-b border-slate-200 flex-wrap gap-2">
                       <div className="flex items-center gap-2">
-                        <UserCheck className="w-5 h-5 text-blue-600" />
+                        <UserCheck className="w-5 h-5 text-slate-600" />
                         <h3 className="font-bold text-slate-900 text-sm uppercase">
                           THÔNG TIN NGƯỜI BÁO TIN & THẨM ĐỊNH BAN ĐẦU
                         </h3>
@@ -1172,22 +1172,22 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                       </div>
                     ) : (
                       /* Identified Sender */
-                      <div className="p-4 bg-blue-50/70 rounded-xl border border-blue-200 space-y-2 text-xs">
-                        <div className="font-bold text-blue-900 text-sm flex items-center gap-2">
-                          <UserCheck className="w-4 h-4 text-blue-600" />
+                      <div className="p-4 bg-slate-50/70 rounded-xl border border-slate-200 space-y-2 text-xs">
+                        <div className="font-bold text-slate-900 text-sm flex items-center gap-2">
+                          <UserCheck className="w-4 h-4 text-slate-600" />
                           <span>NGƯỜI BÁO TIN CÔNG KHAI DANH TÍNH</span>
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
-                          <div className="p-2.5 bg-white rounded-lg border border-blue-100">
+                          <div className="p-2.5 bg-white rounded-lg border border-slate-100">
                             <span className="text-[10px] text-slate-400 block font-bold">Họ và tên:</span>
                             <strong className="text-slate-900 text-sm">{selectedSub.citizenName || 'Lê Văn Bảy'}</strong>
                           </div>
-                          <div className="p-2.5 bg-white rounded-lg border border-blue-100">
+                          <div className="p-2.5 bg-white rounded-lg border border-slate-100">
                             <span className="text-[10px] text-slate-400 block font-bold">Số điện thoại:</span>
                             <strong className="font-mono text-slate-900 text-sm">{selectedSub.citizenPhone}</strong>
                           </div>
-                          <div className="p-2.5 bg-white rounded-lg border border-blue-100">
+                          <div className="p-2.5 bg-white rounded-lg border border-slate-100">
                             <span className="text-[10px] text-slate-400 block font-bold">Email:</span>
                             <span className="text-slate-700 text-xs">{selectedSub.citizenEmail || 'Chưa cung cấp'}</span>
                           </div>
@@ -1279,11 +1279,11 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                   </div>
 
                   {/* MAIN COORDINATION SCREEN */}
-                  <div className="p-6 rounded-2xl bg-white border-2 border-blue-500/40 shadow-lg space-y-6">
+                  <div className="p-6 rounded-lg bg-white border-2 border-slate-500/40 shadow-lg space-y-6">
                     <div className="border-b border-slate-200 pb-3">
                       <div className="flex items-center justify-between flex-wrap gap-2">
                         <div className="flex items-center gap-2">
-                          <Users className="w-5 h-5 text-blue-600" />
+                          <Users className="w-5 h-5 text-slate-600" />
                           <h3 className="text-base font-black text-slate-900 uppercase">
                             MÀN HÌNH ĐIỀU PHỐI CỘNG TÁC VIÊN (CTV) TÁC NGHIỆP HIỆN TRƯỜNG
                           </h3>
@@ -1307,17 +1307,17 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                         value={editorDirectiveNote}
                         onChange={(e) => setEditorDirectiveNote(e.target.value)}
                         placeholder="Ví dụ: Có mặt tại hiện trường trước 07h30, phỏng vấn nhân chứng và ghi hình góc quay toàn cảnh..."
-                        className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500"
                       />
                     </div>
 
                     {/* CẢ 2 BUTTON / KHỐI ĐIỀU PHỐI XUẤT HIỆN RÕ RÀNG */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
                       {/* KHỐI 1: CHỈ ĐỊNH CỤ THỂ 1 CỘNG TÁC VIÊN */}
-                      <div className="p-5 bg-blue-50/60 rounded-2xl border-2 border-blue-200 hover:border-blue-400 transition space-y-4 flex flex-col justify-between">
+                      <div className="p-5 bg-slate-50/60 rounded-lg border-2 border-slate-200 hover:border-slate-400 transition space-y-4 flex flex-col justify-between">
                         <div className="space-y-3">
-                          <div className="flex items-center gap-2 text-blue-900 font-black text-sm">
-                            <div className="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
+                          <div className="flex items-center gap-2 text-slate-900 font-black text-sm">
+                            <div className="w-7 h-7 rounded-lg bg-slate-600 text-white flex items-center justify-center font-bold text-xs">
                               1
                             </div>
                             <span>CHỈ ĐỊNH CỤ THỂ 1 CỘNG TÁC VIÊN</span>
@@ -1349,7 +1349,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                             const rep = MOCK_REPORTERS.find((r) => r.id === selectedReporterId);
                             if (!rep) return null;
                             return (
-                              <div className="p-2.5 bg-white rounded-lg border border-blue-100 flex items-center gap-3 text-xs">
+                              <div className="p-2.5 bg-white rounded-lg border border-slate-100 flex items-center gap-3 text-xs">
                                 <img src={rep.avatar} alt={rep.name} className="w-10 h-10 rounded-full object-cover border" />
                                 <div>
                                   <div className="font-bold text-slate-900">{rep.name} ({rep.id})</div>
@@ -1366,7 +1366,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                           type="button"
                           disabled={isDirectAssigning}
                           onClick={handleAssignSpecificReporter}
-                          className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-black shadow-md transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                          className="w-full py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-xl text-xs font-black shadow-md transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                         >
                           <UserCheck className="w-4 h-4" />
                           <span>
@@ -1378,7 +1378,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                       </div>
 
                       {/* KHỐI 2: GỬI GMAIL TỰ ĐỘNG ĐẾN TẤT CẢ CTV TRONG KHU VỰC */}
-                      <div className="p-5 bg-gradient-to-br from-amber-50 to-red-50 rounded-2xl border-2 border-red-200 hover:border-red-400 transition space-y-4 flex flex-col justify-between">
+                      <div className="p-5 bg-gradient-to-br from-amber-50 to-red-50 rounded-lg border-2 border-red-200 hover:border-red-400 transition space-y-4 flex flex-col justify-between">
                         <div className="space-y-3">
                           <div className="flex items-center gap-2 text-red-900 font-black text-sm">
                             <div className="w-7 h-7 rounded-lg bg-red-600 text-white flex items-center justify-center font-bold text-xs">
@@ -1455,7 +1455,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
               {/* ========================================================================= */}
               {editorSubView === 'VERIFY_REPORT' && selectedSub.fieldVerification && (
                 <div className="space-y-5 animate-fade-in">
-                  <div className="p-6 rounded-2xl bg-white border-2 border-emerald-500/40 shadow-lg space-y-5">
+                  <div className="p-6 rounded-lg bg-white border-2 border-emerald-500/40 shadow-lg space-y-5">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-2">
                       <div className="flex items-center gap-3">
@@ -1496,11 +1496,11 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                       </div>
                       <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
                         <span className="text-slate-400 block text-[10px] uppercase font-bold">Số nhân chứng phỏng vấn:</span>
-                        <strong className="text-blue-700 text-sm">{selectedSub.fieldVerification.witnessCount ?? 0} người</strong>
+                        <strong className="text-slate-700 text-sm">{selectedSub.fieldVerification.witnessCount ?? 0} người</strong>
                       </div>
                       <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
                         <span className="text-slate-400 block text-[10px] uppercase font-bold">Số lượng tư liệu gửi kèm:</span>
-                        <strong className="text-purple-700 text-sm">
+                        <strong className="text-slate-700 text-sm">
                           {selectedSub.fieldVerification.evidenceAttachments?.length || 0} mục (Ảnh & Video)
                         </strong>
                       </div>
@@ -1520,7 +1520,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                     {selectedSub.fieldVerification.evidenceAttachments && selectedSub.fieldVerification.evidenceAttachments.length > 0 && (
                       <div className="space-y-3 pt-2">
                         <div className="flex items-center gap-2">
-                          <Film className="w-4 h-4 text-purple-600" />
+                          <Film className="w-4 h-4 text-slate-600" />
                           <span className="text-xs font-black text-slate-900 uppercase">
                             Hồ Sơ Hình Ảnh & Video Hiện Trường ({selectedSub.fieldVerification.evidenceAttachments.length})
                           </span>
@@ -1530,7 +1530,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                           {selectedSub.fieldVerification.evidenceAttachments.map((att) => (
                             <div
                               key={att.id}
-                              className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col justify-between"
+                              className="rounded-lg overflow-hidden border border-slate-200 bg-slate-50 shadow-sm flex flex-col justify-between"
                             >
                               <div className="relative bg-black flex items-center justify-center h-44 overflow-hidden">
                                 {att.type === 'video' ? (
@@ -1547,7 +1547,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                                   />
                                 )}
                                 <span className={`absolute top-2 left-2 px-2.5 py-0.5 rounded text-[10px] font-black uppercase text-white shadow ${
-                                  att.type === 'video' ? 'bg-purple-600' : 'bg-blue-600'
+                                  att.type === 'video' ? 'bg-slate-600' : 'bg-slate-600'
                                 }`}>
                                   {att.type === 'video' ? '🎥 Video hiện trường' : '📸 Ảnh đối chứng'}
                                 </span>
@@ -1569,7 +1569,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                     {/* BTV ACTION: PHÁT LỆNH YÊU CẦU CTV VIẾT BÀI */}
                     <div className="pt-4 border-t border-slate-200 space-y-3">
                       {selectedSub.stage === 'FIELD_VERIFIED' ? (
-                        <div className="p-5 bg-gradient-to-r from-emerald-50 via-teal-50 to-blue-50 rounded-2xl border-2 border-emerald-300 space-y-4">
+                        <div className="p-5 bg-gradient-to-r from-emerald-50 via-teal-50 to-slate-50 rounded-lg border-2 border-emerald-300 space-y-4">
                           <div className="flex items-center gap-2 text-emerald-950 font-bold text-sm">
                             <CheckCircle2 className="w-5 h-5 text-emerald-600" />
                             <span>XÁC NHẬN BÁO CÁO HỢP LỆ & PHÁT LỆNH YÊU CẦU CTV VIẾT BÀI</span>
@@ -1616,7 +1616,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                             <button
                               type="button"
                               onClick={() => setEditorSubView('ARTICLE_STAGE')}
-                              className="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-bold flex items-center gap-1 cursor-pointer"
+                              className="px-3 py-1.5 bg-slate-600 hover:bg-slate-700 text-white rounded-lg font-bold flex items-center gap-1 cursor-pointer"
                             >
                               <span>Xem bản thảo CTV nộp →</span>
                             </button>
@@ -1640,10 +1640,10 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                   <div className="p-5 bg-slate-50 rounded-xl border border-slate-300 space-y-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
-                        <FileText className="w-4 h-4 text-purple-600" />
+                        <FileText className="w-4 h-4 text-slate-600" />
                         <span>KIỂM TRA BÀI VIẾT TỪ HIỆN TRƯỜNG (BẢN THẢO VÒNG {selectedSub.articleDraft.revisionRound})</span>
                       </div>
-                      <span className="text-xs text-purple-700 font-semibold bg-purple-50 px-2.5 py-0.5 rounded border border-purple-200">
+                      <span className="text-xs text-slate-700 font-semibold bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200">
                         Tác giả: {selectedSub.articleDraft.authorName}
                       </span>
                     </div>
@@ -1662,23 +1662,23 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
 
                     {/* AI Review Result */}
                     {selectedSub.aiReview && (
-                      <div className="p-4 bg-purple-50/70 rounded-xl border border-purple-200 space-y-3">
+                      <div className="p-4 bg-slate-50/70 rounded-xl border border-slate-200 space-y-3">
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2 text-purple-900 font-bold text-xs">
-                            <Bot className="w-4 h-4 text-purple-600" />
+                          <div className="flex items-center gap-2 text-slate-900 font-bold text-xs">
+                            <Bot className="w-4 h-4 text-slate-600" />
                             <span>KẾT QUẢ AI REVIEW & TÓM TẮT NỘI DUNG (GEMINI FLASH)</span>
                           </div>
-                          <span className="text-[11px] font-bold text-purple-700 bg-white px-2 py-0.5 rounded border border-purple-200">
+                          <span className="text-[11px] font-bold text-slate-700 bg-white px-2 py-0.5 rounded border border-slate-200">
                             Độ khớp sự thật: {selectedSub.aiReview.factualConsistencyScore}%
                           </span>
                         </div>
 
-                        <p className="text-xs text-slate-700 bg-white p-2.5 rounded-lg border border-purple-100">
+                        <p className="text-xs text-slate-700 bg-white p-2.5 rounded-lg border border-slate-100">
                           <strong>Tóm tắt vụ việc:</strong> {selectedSub.aiReview.summary}
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
-                          <div className="bg-white p-2.5 rounded-lg border border-purple-100">
+                          <div className="bg-white p-2.5 rounded-lg border border-slate-100">
                             <strong className="text-emerald-700 block mb-1">✓ Điểm mạnh bài viết:</strong>
                             <ul className="list-disc pl-4 space-y-0.5 text-slate-600">
                               {selectedSub.aiReview.strengths.map((s, i) => (
@@ -1686,7 +1686,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                               ))}
                             </ul>
                           </div>
-                          <div className="bg-white p-2.5 rounded-lg border border-purple-100">
+                          <div className="bg-white p-2.5 rounded-lg border border-slate-100">
                             <strong className="text-amber-700 block mb-1">⚠ Cảnh báo biên tập & Pháp lý:</strong>
                             <ul className="list-disc pl-4 space-y-0.5 text-slate-600">
                               {selectedSub.aiReview.editorialWarnings.map((w, i) => (
@@ -1713,7 +1713,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                           type="button"
                           onClick={handleRunAiReview}
                           disabled={isAiReviewing}
-                          className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                          className="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
                         >
                           <Sparkles className="w-3.5 h-3.5 text-amber-300" />
                           <span>{isAiReviewing ? 'AI Đang Phân Tích...' : 'Chạy AI Review & Tóm Tắt'}</span>
@@ -1722,7 +1722,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
                         <button
                           type="button"
                           onClick={handleForwardToDeputy}
-                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm"
+                          className="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm"
                         >
                           <span>Gửi Trình Phó Tổng Biên Tập</span>
                           <ArrowRight className="w-3.5 h-3.5" />
@@ -1766,7 +1766,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
               )}
             </div>
           ) : (
-            <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-400">
+            <div className="bg-white rounded-lg border border-slate-200 p-12 text-center text-slate-400">
               Chọn một tin phản ánh bên trái để xử lý
             </div>
           )}
@@ -1778,7 +1778,7 @@ export const EditorDesk: React.FC<EditorDeskProps> = ({
       {/* ========================================================================= */}
       {showSanctionModal && selectedSub && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-          <div className="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl border border-slate-200 space-y-5 max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-lg max-w-xl w-full p-6 shadow-2xl border border-slate-200 space-y-5 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2 text-red-600">
                 <ShieldAlert className="w-5 h-5" />

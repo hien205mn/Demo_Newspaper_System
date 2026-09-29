@@ -73,7 +73,7 @@ export const TrackingModal: React.FC<TrackingModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 space-y-6 max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-lg max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 space-y-6 max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
           <div>
@@ -116,7 +116,7 @@ export const TrackingModal: React.FC<TrackingModalProps> = ({
         {foundSubmission ? (
           <div className="space-y-6">
             {/* Status Card */}
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div className="p-5 rounded-lg bg-slate-50 border border-slate-200 space-y-3">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
                   <span className="text-[10px] font-bold text-slate-400 uppercase">Mã Hồ Sơ</span>
@@ -173,9 +173,9 @@ export const TrackingModal: React.FC<TrackingModalProps> = ({
             </div>
 
             {/* Current Stage Explanation */}
-            <div className="p-4 bg-blue-50 rounded-xl border border-blue-200 text-xs text-blue-900 space-y-1">
+            <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-900 space-y-1">
               <div className="font-bold">Trạng thái nghiệp vụ hiện tại: {foundSubmission.stage}</div>
-              <p className="text-blue-800 leading-relaxed">
+              <p className="text-slate-800 leading-relaxed">
                 {foundSubmission.stage === 'PUBLISHED'
                   ? 'Tin đã được thẩm định và xuất bản chính thức trên Cổng thông tin Tòa soạn.'
                   : foundSubmission.stage === 'EIC_PENDING'

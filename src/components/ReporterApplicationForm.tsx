@@ -164,7 +164,7 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
 
       {/* Success Notification View */}
       {submittedResult ? (
-        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-emerald-200 shadow-xl text-center space-y-6 animate-fade-in">
+        <div className="bg-white rounded-lg p-8 sm:p-10 border border-emerald-200 shadow-xl text-center space-y-6 animate-fade-in">
           <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-inner">
             <FileCheck2 className="w-10 h-10" />
           </div>
@@ -181,7 +181,7 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
             </p>
           </div>
 
-          <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-left max-w-xl mx-auto space-y-3.5">
+          <div className="bg-slate-50 rounded-lg p-6 border border-slate-200 text-left max-w-xl mx-auto space-y-3.5">
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <span className="text-xs font-bold text-slate-500 uppercase">Mã Hồ Sơ Xét Duyệt CTV:</span>
               <span className="font-mono text-xl font-black text-red-600 tracking-wider">
@@ -225,7 +225,7 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Header Banner */}
-          <div className="bg-gradient-to-r from-slate-900 via-slate-850 to-red-950 rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-red-900/40 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-slate-900 via-slate-850 to-red-950 rounded-lg p-6 sm:p-8 text-white shadow-xl border border-red-900/40 relative overflow-hidden">
             <div className="relative z-10 max-w-2xl space-y-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/30 border border-red-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
                 <Camera className="w-3.5 h-3.5" />
@@ -248,14 +248,14 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
                   <Award className="w-4 h-4 text-amber-400" /> Nhuận bút tin bài hấp dẫn
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Building2 className="w-4 h-4 text-blue-400" /> Tòa soạn bảo trợ pháp lý
+                  <Building2 className="w-4 h-4 text-slate-400" /> Tòa soạn bảo trợ pháp lý
                 </span>
               </div>
             </div>
           </div>
 
           {/* Section 1: Thông tin nhân thân & Địa bàn tác nghiệp */}
-          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm space-y-5">
+          <div className="bg-white rounded-lg p-6 sm:p-7 border border-slate-200 shadow-sm space-y-5">
             <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100">
               <div className="w-8 h-8 rounded-lg bg-red-100 text-red-700 flex items-center justify-center font-bold text-sm">
                 1
@@ -416,9 +416,9 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
           </div>
 
           {/* Section 2: Chuyên môn, Trang thiết bị & Kinh nghiệm */}
-          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm space-y-5">
+          <div className="bg-white rounded-lg p-6 sm:p-7 border border-slate-200 shadow-sm space-y-5">
             <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">
                 2
               </div>
               <div>
@@ -519,13 +519,13 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
                       onClick={() => toggleEquipment(eq)}
                       className={`p-3 rounded-xl border text-left text-xs font-medium flex items-center justify-between transition cursor-pointer ${
                         isChecked
-                          ? 'bg-blue-50 border-blue-500 text-blue-900 font-semibold'
+                          ? 'bg-slate-50 border-slate-500 text-slate-900 font-semibold'
                           : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                       }`}
                     >
                       <span>{eq}</span>
                       <div className={`w-4 h-4 rounded border flex items-center justify-center shrink-0 ml-2 ${
-                        isChecked ? 'bg-blue-600 border-blue-600 text-white' : 'border-slate-300 bg-white'
+                        isChecked ? 'bg-slate-600 border-slate-600 text-white' : 'border-slate-300 bg-white'
                       }`}>
                         {isChecked && <Check className="w-3 h-3" />}
                       </div>
@@ -564,7 +564,7 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
           </div>
 
           {/* Section 3: Cam kết Đạo đức báo chí */}
-          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm space-y-4">
+          <div className="bg-white rounded-lg p-6 sm:p-7 border border-slate-200 shadow-sm space-y-4">
             <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100">
               <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
                 3
@@ -579,7 +579,7 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
               </div>
             </div>
 
-            <div className="space-y-3 text-xs text-slate-700 bg-slate-50 p-4 rounded-2xl border border-slate-200 leading-relaxed">
+            <div className="space-y-3 text-xs text-slate-700 bg-slate-50 p-4 rounded-lg border border-slate-200 leading-relaxed">
               <label className="flex items-start gap-3 cursor-pointer">
                 <input
                   type="checkbox"
@@ -613,7 +613,7 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
             <button
               type="button"
               onClick={onBack}
-              className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-700 rounded-2xl text-sm font-bold border border-slate-300 transition cursor-pointer"
+              className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-bold border border-slate-300 transition cursor-pointer"
             >
               Hủy Bỏ & Quay Lại Hồ Sơ
             </button>
@@ -621,7 +621,7 @@ export const ReporterApplicationForm: React.FC<ReporterApplicationFormProps> = (
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-red-600 via-amber-600 to-red-600 hover:from-red-500 hover:to-amber-500 text-white rounded-2xl text-base font-black tracking-wide shadow-xl shadow-red-950/60 flex items-center justify-center gap-3 transition-all transform active:scale-95 cursor-pointer disabled:opacity-50"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-red-600 via-amber-600 to-red-600 hover:from-red-500 hover:to-amber-500 text-white rounded-lg text-base font-black tracking-wide shadow-xl shadow-red-950/60 flex items-center justify-center gap-3 transition-all transform active:scale-95 cursor-pointer disabled:opacity-50"
             >
               <Send className="w-5 h-5 text-amber-300" />
               <span>{isSubmitting ? 'ĐANG GỬI HỒ SƠ...' : 'GỬI ĐƠN XIN XÉT DUYỆT CỘNG TÁC VIÊN'}</span>

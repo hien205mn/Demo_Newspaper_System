@@ -84,15 +84,12 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
   };
 
   return (
-    <div className="space-y-8 pb-12">
+    <div className="space-y-10 pb-12">
       {/* HERO BANNER: CỔNG THÔNG TIN DÂN SINH */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl">
-        <div className="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-1/3 -mb-16 w-80 h-80 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-300 text-xs font-bold uppercase tracking-wider">
+      <section className="relative overflow-hidden bg-ink text-white rounded-md p-6 sm:p-10 border border-slate-800 shadow-xl">
+        <div className="relative z-10 max-w-5xl mx-auto text-left space-y-6">
+          <div className="flex flex-wrap items-center justify-start gap-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-red-500/15 border border-red-500/30 text-red-200 text-xs font-bold uppercase tracking-wider">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-400"></span>
@@ -116,31 +113,31 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
             </button>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white">
-            CỔNG TIẾP NHẬN & XÁC THỰC <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-amber-400 to-red-400">
-              TIN NÓNG DÂN SINH 24/7
+          <h1 className="max-w-4xl text-3xl sm:text-5xl font-bold leading-tight text-white">
+            Cổng tiếp nhận & xác thực <br className="hidden sm:block" />
+            <span className="text-red-400">
+              tin nóng dân sinh 24/7
             </span>
           </h1>
 
-          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
             Mỗi người dân là một "tai mắt" của cộng đồng. Khi phát hiện sự cố, tai nạn, sạt lở, ô nhiễm môi trường hay sai phạm dân sinh, hãy gửi ngay thông tin để Tòa soạn thẩm định, điều phối phóng viên xác minh và can thiệp kịp thời.
           </p>
 
           {/* PROMINENT BUTTONS: GỬI TIN NÓNG • XEM PROFILE & ĐIỂM UY TÍN • TRA CỨU */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 flex-wrap">
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 sm:gap-4 flex-wrap">
             <button
               onClick={onOpenSubmit}
-              className="w-full sm:w-auto px-7 py-4 bg-gradient-to-r from-red-600 via-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white rounded-2xl text-base font-black tracking-wide shadow-xl shadow-red-950/60 hover:shadow-2xl hover:shadow-red-700/30 border border-red-400/40 flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="w-full sm:w-auto px-6 py-4 bg-breaking hover:bg-red-700 text-white rounded-md text-sm font-bold shadow-lg shadow-red-950/30 border border-red-500 flex items-center justify-center gap-2.5 transition-all hover:shadow-lg hover:scale-[1.01] cursor-pointer"
             >
               <Flame className="w-5 h-5 text-amber-300 animate-bounce" />
-              <span>🚨 BẤM ĐỂ GỬI TIN NÓNG KHẨN CẤP</span>
+              <span>Gửi tin nóng khẩn cấp</span>
             </button>
 
             {/* BUTTON XEM PROFILE & HIỂN THỊ ĐIỂM UY TÍN */}
             <button
               onClick={onOpenProfile}
-              className="w-full sm:w-auto px-6 py-4 bg-gradient-to-r from-slate-800 via-slate-800 to-amber-950/60 hover:from-slate-750 hover:to-slate-700 text-white rounded-2xl text-sm font-bold border border-amber-500/50 hover:border-amber-400 flex items-center justify-center gap-3 transition shadow-lg shadow-black/30 cursor-pointer group"
+              className="w-full sm:w-auto px-5 py-3.5 bg-white/5 hover:bg-white/10 text-white rounded-md text-sm font-bold border border-slate-700 hover:border-slate-500 flex items-center justify-center gap-3 transition-all hover:shadow-lg hover:scale-[1.01] cursor-pointer group"
             >
               <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold text-xs border border-amber-400/40 shrink-0">
                 <Star className="w-4 h-4 fill-current text-amber-400" />
@@ -161,19 +158,19 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
             {/* BUTTON XÉT DUYỆT CHUYÊN GIA */}
             <button
               onClick={onOpenApplyExpert || onOpenProfile}
-              className="w-full sm:w-auto px-6 py-4 bg-gradient-to-r from-indigo-900 via-indigo-850 to-purple-950 hover:from-indigo-800 hover:to-purple-900 text-white rounded-2xl text-sm font-bold border border-indigo-400/50 hover:border-indigo-300 flex items-center justify-center gap-3 transition shadow-lg shadow-indigo-950/40 cursor-pointer group"
+              className="w-full sm:w-auto px-5 py-3.5 bg-white/5 hover:bg-white/10 text-white rounded-md text-sm font-bold border border-slate-700 hover:border-slate-500 flex items-center justify-center gap-3 transition-all hover:shadow-lg hover:scale-[1.01] cursor-pointer group"
             >
-              <div className="w-8 h-8 rounded-xl bg-indigo-500/30 text-indigo-300 flex items-center justify-center font-bold text-xs border border-indigo-400/40 shrink-0 group-hover:scale-105 transition-transform">
-                <GraduationCap className="w-4 h-4 text-indigo-300" />
+              <div className="w-8 h-8 rounded-md bg-white/10 text-slate-200 flex items-center justify-center font-bold text-xs border border-slate-600 shrink-0 group-hover:scale-[1.01] transition-all">
+                <GraduationCap className="w-4 h-4 text-slate-200" />
               </div>
               <div className="text-left">
                 <div className="flex items-center gap-1.5 leading-none">
                   <span>Xét Duyệt Chuyên Gia</span>
-                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-indigo-400 text-slate-950 uppercase">
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-red-500 text-white uppercase">
                     Mới
                   </span>
                 </div>
-                <div className="text-[10px] text-indigo-200/80 font-normal mt-1">
+                <div className="text-[10px] text-slate-400 font-normal mt-1">
                   Đăng ký phản biện & viết bài báo chí
                 </div>
               </div>
@@ -181,7 +178,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
 
             <button
               onClick={() => onOpenTrack()}
-              className="w-full sm:w-auto px-5 py-4 bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white rounded-2xl text-sm font-bold border border-slate-700 flex items-center justify-center gap-2 transition cursor-pointer"
+              className="w-full sm:w-auto px-5 py-3.5 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white rounded-md text-sm font-bold border border-slate-700 flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:scale-[1.01] cursor-pointer"
             >
               <Search className="w-4 h-4 text-slate-400" />
               <span>Tra Cứu Mã Hồ Sơ</span>
@@ -190,7 +187,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
             {onOpenEditProfile && (
               <button
                 onClick={onOpenEditProfile}
-                className="w-full sm:w-auto px-4 py-4 bg-slate-800/90 hover:bg-slate-700 text-amber-300 hover:text-white rounded-2xl text-sm font-bold border border-amber-500/40 hover:border-amber-400 flex items-center justify-center gap-2 transition cursor-pointer shadow-md"
+                className="w-full sm:w-auto px-4 py-3.5 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white rounded-md text-sm font-bold border border-slate-700 hover:border-slate-500 flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:scale-[1.01] cursor-pointer"
                 title="Chỉnh sửa thông tin hồ sơ người dân"
               >
                 <Edit3 className="w-4 h-4 text-amber-400" />
@@ -200,8 +197,8 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
           </div>
 
           {/* Quick Tracking Search Bar */}
-          <div className="pt-2 max-w-md mx-auto">
-            <form onSubmit={handleSearchTrack} className="flex items-center gap-2 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700">
+          <div className="pt-2 max-w-lg">
+            <form onSubmit={handleSearchTrack} className="flex items-center gap-2 bg-slate-800/80 p-1.5 rounded-md border border-slate-700">
               <Search className="w-4 h-4 text-slate-400 ml-2.5" />
               <input
                 type="text"
@@ -226,7 +223,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
           const khieuNaiCount = submissions.filter((s) => s.category === 'KHIEU_NAI').length;
           return (
             <div className="mt-8 pt-6 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              <div className="bg-slate-800/90 hover:bg-slate-800/100 transition p-4 rounded-xl border border-red-500/30 flex items-center justify-between shadow-lg">
+              <div className="bg-white/5 hover:bg-white/10 transition-all hover:shadow-lg hover:scale-[1.01] p-4 rounded-md border border-red-500/30 flex items-center justify-between">
                 <div className="flex items-center gap-3.5">
                   <div className="w-12 h-12 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center border border-red-500/30 shrink-0">
                     <Flame className="w-6 h-6 animate-pulse" />
@@ -245,7 +242,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
                 </div>
               </div>
 
-              <div className="bg-slate-800/90 hover:bg-slate-800/100 transition p-4 rounded-xl border border-amber-500/30 flex items-center justify-between shadow-lg">
+              <div className="bg-white/5 hover:bg-white/10 transition-all hover:shadow-lg hover:scale-[1.01] p-4 rounded-md border border-slate-700 flex items-center justify-between">
                 <div className="flex items-center gap-3.5">
                   <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center border border-amber-500/30 shrink-0">
                     <FileText className="w-6 h-6" />
@@ -269,7 +266,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
       </section>
 
       {/* SECTION: 3 TIÊU CHUẨN CHẤM ĐIỂM MINH BẠCH DÀNH CHO NGƯỜI DÂN */}
-      <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+      <section className="bg-white rounded-md p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
           <div>
             <span className="text-xs font-bold text-red-600 uppercase tracking-wide">
@@ -290,8 +287,8 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
-          <div className="p-5 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">
+          <div className="p-5 rounded-md bg-slate-50 border border-slate-200 space-y-3">
+            <div className="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center font-bold">
               1
             </div>
             <h3 className="font-bold text-slate-900 text-base">
@@ -301,27 +298,27 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
               Thang điểm từ 10 đến 40 điểm dựa trên phạm vi tác động địa lý của sự cố:
             </p>
             <ul className="text-xs space-y-2 text-slate-700">
-              <li className="flex justify-between pb-1 border-b border-blue-200/60">
+              <li className="flex justify-between pb-1 border-b border-slate-200/60">
                 <span>Phường, Xã / Cục bộ</span>
-                <strong className="text-blue-700">10 điểm</strong>
+                <strong className="text-ink">10 điểm</strong>
               </li>
-              <li className="flex justify-between pb-1 border-b border-blue-200/60">
+              <li className="flex justify-between pb-1 border-b border-slate-200/60">
                 <span>Cấp Quận, Huyện, Thị xã</span>
-                <strong className="text-blue-700">20 điểm</strong>
+                <strong className="text-ink">20 điểm</strong>
               </li>
-              <li className="flex justify-between pb-1 border-b border-blue-200/60">
+              <li className="flex justify-between pb-1 border-b border-slate-200/60">
                 <span>Cấp Tỉnh, Thành phố lớn</span>
-                <strong className="text-blue-700">30 điểm</strong>
+                <strong className="text-ink">30 điểm</strong>
               </li>
               <li className="flex justify-between">
                 <span>Liên tỉnh / Toàn quốc</span>
-                <strong className="text-blue-700">40 điểm</strong>
+                <strong className="text-ink">40 điểm</strong>
               </li>
             </ul>
           </div>
 
           {/* Card 2 */}
-          <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200 space-y-3">
+          <div className="p-5 rounded-lg bg-amber-50/50 border border-amber-200 space-y-3">
             <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center font-bold">
               2
             </div>
@@ -352,7 +349,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
           </div>
 
           {/* Card 3 */}
-          <div className="p-5 rounded-2xl bg-red-50/50 border border-red-200 space-y-3">
+          <div className="p-5 rounded-lg bg-red-50/50 border border-red-200 space-y-3">
             <div className="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold">
               3
             </div>
@@ -410,7 +407,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
       </section>
 
       {/* SECTION: BẢNG THEO DÕI VÀ LỌC TIN BÁO DÂN SINH THEO TỪNG LOẠI */}
-      <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+      <section className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
           <div>
             <span className="text-xs font-bold text-red-600 uppercase tracking-wide">
@@ -430,7 +427,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
         </div>
 
         {/* Filter Toolbar */}
-        <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+        <div className="p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-3">
             {/* Lọc theo loại nhiệm vụ / loại tin */}
             <div className="flex flex-wrap items-center gap-1.5 text-xs">
@@ -478,7 +475,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
                 onClick={() => setFilterStatus('ALL')}
                 className={`px-2.5 py-1.5 rounded-lg font-bold transition cursor-pointer ${
                   filterStatus === 'ALL'
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-slate-600 text-white'
                     : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
                 }`}
               >
@@ -535,7 +532,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
                 <div
                   key={sub.id}
                   onClick={() => onSelectSubmission(sub)}
-                  className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition cursor-pointer space-y-2.5 flex flex-col justify-between group"
+                  className="p-4 rounded-lg bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition cursor-pointer space-y-2.5 flex flex-col justify-between group"
                 >
                   <div className="space-y-2">
                     <div className="flex items-center justify-between text-[10px]">
@@ -605,7 +602,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
         </div>
 
         {/* Hero editorial card */}
-        <div className="bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-800 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 text-white rounded-lg p-6 sm:p-8 shadow-xl border border-slate-800 relative overflow-hidden">
           <div className="relative z-10 max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/30 border border-red-500/40 text-red-300 text-xs font-bold uppercase tracking-wider">
               <Newspaper className="w-3.5 h-3.5 text-amber-400" />
@@ -631,7 +628,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
                 <div className="text-[11px] text-slate-400">Phóng viên & CTV</div>
               </div>
               <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                <div className="text-xl sm:text-2xl font-black text-blue-400 font-mono">24/7</div>
+                <div className="text-xl sm:text-2xl font-black text-slate-400 font-mono">24/7</div>
                 <div className="text-[11px] text-slate-400">Trực ban tiếp nhận</div>
               </div>
               <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60">
@@ -644,7 +641,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
 
         {/* 4 Core Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
+          <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
             <div className="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center">
               <ShieldCheck className="w-5 h-5" />
             </div>
@@ -654,8 +651,8 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
             </p>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
-            <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
+          <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
+            <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center">
               <Users className="w-5 h-5" />
             </div>
             <h4 className="font-bold text-slate-900 text-sm">Mạng Lưới Tác Nghiệp Rộng Khắp</h4>
@@ -664,7 +661,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
             </p>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
+          <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
             <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center">
               <Scale className="w-5 h-5" />
             </div>
@@ -674,7 +671,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
             </p>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
+          <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2.5 hover:shadow-md transition">
             <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
               <Award className="w-5 h-5" />
             </div>
@@ -686,7 +683,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
         </div>
 
         {/* Editorial Departments & Divisions */}
-        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+        <div className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
           <div className="border-b border-slate-100 pb-3 flex items-center justify-between">
             <div>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Cơ Cấu Nghiệp Vụ</span>
@@ -724,7 +721,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex gap-3.5">
-              <div className="w-9 h-9 rounded-lg bg-blue-600/10 text-blue-600 flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-slate-600/10 text-slate-600 flex items-center justify-center shrink-0">
                 <Users className="w-5 h-5" />
               </div>
               <div className="space-y-1">
@@ -750,7 +747,7 @@ export const CitizenPortal: React.FC<CitizenPortalProps> = ({
         </div>
 
         {/* 4 Commitments banner */}
-        <div className="bg-red-50 rounded-2xl p-6 border border-red-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-red-50 rounded-lg p-6 border border-red-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center shrink-0 shadow-md">
               <Award className="w-6 h-6" />

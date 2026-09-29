@@ -172,7 +172,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
     <div className="max-w-5xl mx-auto space-y-6 animate-fade-in pb-12">
       {/* Save Success Alert */}
       {saveSuccessMsg && (
-        <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-900 rounded-2xl flex items-center justify-between shadow-sm animate-fade-in">
+        <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-900 rounded-lg flex items-center justify-between shadow-sm animate-fade-in">
           <div className="flex items-center gap-2.5">
             <CheckCircle2 className="w-5 h-5 text-emerald-600" />
             <span className="text-sm font-bold">
@@ -202,9 +202,9 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
           {onOpenApplyExpert && (
             <button
               onClick={onOpenApplyExpert}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-indigo-900 to-purple-900 hover:from-indigo-800 hover:to-purple-800 text-white rounded-xl text-xs font-bold border border-indigo-400/40 shadow-sm transition cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-slate-900 to-slate-900 hover:from-slate-800 hover:to-slate-800 text-white rounded-xl text-xs font-bold border border-slate-400/40 shadow-sm transition cursor-pointer"
             >
-              <GraduationCap className="w-3.5 h-3.5 text-indigo-300" />
+              <GraduationCap className="w-3.5 h-3.5 text-slate-300" />
               <span>Xét duyệt Chuyên gia</span>
             </button>
           )}
@@ -227,7 +227,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
       </div>
 
       {/* Hero Profile Header Card */}
-      <div className="bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-800 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 rounded-lg p-6 sm:p-8 text-white shadow-xl border border-slate-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -240,9 +240,9 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
               <img
                 src={profileData.avatar}
                 alt={profileData.name}
-                className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-amber-400 shadow-xl group-hover:opacity-90 transition"
+                className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-cover border-2 border-amber-400 shadow-xl group-hover:opacity-90 transition"
               />
-              <div className="absolute inset-0 bg-black/40 rounded-2xl opacity-0 group-hover:opacity-100 flex items-center justify-center text-xs font-bold text-white transition">
+              <div className="absolute inset-0 bg-black/40 rounded-lg opacity-0 group-hover:opacity-100 flex items-center justify-center text-xs font-bold text-white transition">
                 <Camera className="w-5 h-5 text-amber-300" />
               </div>
               <div className="absolute -bottom-2 -right-2 bg-amber-500 text-slate-950 p-1.5 rounded-xl font-bold text-xs shadow flex items-center gap-1 border border-white/20">
@@ -307,7 +307,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
       {/* CORE HIGHLIGHT: CARD ĐIỂM UY TÍN & XIN XÉT DUYỆT CỘNG TÁC VIÊN */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Column: Điểm uy tín Card (7 cols) */}
-        <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm space-y-6">
+        <div className="lg:col-span-7 bg-white rounded-lg p-6 sm:p-7 border border-slate-200 shadow-sm space-y-6">
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <div>
               <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">
@@ -380,15 +380,15 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
                 </span>
               </div>
 
-              <div className="p-3 rounded-xl bg-blue-50/80 border border-blue-200 flex items-center justify-between">
+              <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <Compass className="w-4 h-4 text-blue-600 shrink-0" />
+                  <Compass className="w-4 h-4 text-slate-600 shrink-0" />
                   <div>
                     <strong className="text-slate-900">Cung cấp tọa độ GPS thực địa & Video sắc nét</strong>
                     <div className="text-[11px] text-slate-500">Giúp phóng viên tiếp cận hiện trường nhanh dưới 20 phút</div>
                   </div>
                 </div>
-                <span className="font-mono font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded text-xs">
+                <span className="font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded text-xs">
                   +20 Điểm
                 </span>
               </div>
@@ -420,7 +420,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
         {/* Right Column: CTA Xin xét duyệt Cộng tác viên (5 cols) */}
         <div className="lg:col-span-5 flex flex-col gap-6">
           {/* CTV Application Card */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-850 to-red-950 rounded-3xl p-6 sm:p-7 border border-red-900/40 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-br from-slate-900 via-slate-850 to-red-950 rounded-lg p-6 sm:p-7 border border-red-900/40 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-400 text-slate-950">
@@ -442,7 +442,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
 
               {/* Status if already applied */}
               {ctvApplication ? (
-                <div className="p-4 rounded-2xl bg-amber-950/60 border border-amber-500/50 space-y-2">
+                <div className="p-4 rounded-lg bg-amber-950/60 border border-amber-500/50 space-y-2">
                   <div className="flex items-center gap-2 text-amber-300 font-bold text-xs uppercase">
                     <Clock className="w-4 h-4 animate-spin" />
                     <span>Hồ Sơ Đang Trong Quy Trình Thẩm Định</span>
@@ -476,7 +476,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
             <div className="pt-6">
               <button
                 onClick={onOpenApplyCTV}
-                className="w-full py-4 px-6 bg-gradient-to-r from-red-600 via-amber-600 to-red-600 hover:from-red-500 hover:to-amber-500 text-white rounded-2xl font-black text-sm sm:text-base tracking-wide shadow-xl shadow-red-950/80 hover:shadow-red-700/40 border border-amber-400/50 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group"
+                className="w-full py-4 px-6 bg-gradient-to-r from-red-600 via-amber-600 to-red-600 hover:from-red-500 hover:to-amber-500 text-white rounded-lg font-black text-sm sm:text-base tracking-wide shadow-xl shadow-red-950/80 hover:shadow-red-700/40 border border-amber-400/50 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group"
               >
                 <Camera className="w-5 h-5 text-amber-300 group-hover:rotate-12 transition-transform" />
                 <span>
@@ -491,13 +491,13 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
           </div>
 
           {/* EXPERT APPLICATION CARD */}
-          <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-6 sm:p-7 border border-indigo-500/40 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 rounded-lg p-6 sm:p-7 border border-slate-500/40 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-indigo-500/30 text-indigo-300 border border-indigo-400/40">
+                <span className="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-500/30 text-slate-300 border border-slate-400/40">
                   HỘI ĐỒNG PHẢN BIỆN CHUYÊN MÔN
                 </span>
-                <span className="text-xs text-indigo-300 font-bold">
+                <span className="text-xs text-slate-300 font-bold">
                   {expertApplication?.status === 'APPROVED' ? '✓ ĐÃ KIỂM ĐỊNH' : 'MỞ XÉT DUYỆT'}
                 </span>
               </div>
@@ -506,32 +506,32 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
                 <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
                   XÉT DUYỆT CHUYÊN GIA BÁO CHÍ
                 </h3>
-                <p className="text-xs text-indigo-200/80 mt-2 leading-relaxed">
+                <p className="text-xs text-slate-200/80 mt-2 leading-relaxed">
                   Dành cho các học giả, nhà nghiên cứu, luật sư và kỹ sư đầu ngành: Mở quyền <strong>viết bài phân tích chuyên sâu</strong>, <strong>theo dõi tiến độ tòa soạn</strong> và <strong>chỉnh sửa bài viết</strong> trực tiếp với Ban Biên Tập.
                 </p>
               </div>
 
               {expertApplication && expertApplication.status === 'APPROVED' ? (
-                <div className="p-3.5 rounded-2xl bg-indigo-900/60 border border-indigo-400/50 space-y-1.5 text-xs text-indigo-100">
+                <div className="p-3.5 rounded-lg bg-slate-900/60 border border-slate-400/50 space-y-1.5 text-xs text-slate-100">
                   <div className="flex items-center gap-2 font-bold text-amber-300">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                     <span>Đã Được Cấp Quyền Chuyên Gia Chính Thức</span>
                   </div>
                   <div>Học hàm: <strong>{expertApplication.academicTitle}</strong></div>
-                  <div className="text-[11px] text-indigo-200">Đơn vị: {expertApplication.organization}</div>
+                  <div className="text-[11px] text-slate-200">Đơn vị: {expertApplication.organization}</div>
                 </div>
               ) : (
                 <div className="space-y-2 text-xs text-slate-300">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" />
                     <span>Học vị Thạc sĩ, Tiến sĩ hoặc chuyên gia trên 5 năm kinh nghiệm</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" />
                     <span>Được hưởng mức nhuận bút Chuyên Gia theo khung đặc biệt</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" />
                     <span>Toàn quyền sử dụng chức năng Người dân + Viết bài phân tích</span>
                   </div>
                 </div>
@@ -541,9 +541,9 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
             <div className="pt-5">
               <button
                 onClick={onOpenApplyExpert}
-                className="w-full py-4 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-2xl font-black text-sm sm:text-base tracking-wide shadow-xl shadow-indigo-950/80 hover:shadow-indigo-700/40 border border-indigo-300/40 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group"
+                className="w-full py-4 px-6 bg-gradient-to-r from-slate-600 via-slate-600 to-slate-600 hover:from-slate-500 hover:to-slate-500 text-white rounded-lg font-black text-sm sm:text-base tracking-wide shadow-xl shadow-slate-950/80 hover:shadow-slate-700/40 border border-slate-300/40 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group"
               >
-                <GraduationCap className="w-5 h-5 text-indigo-200 group-hover:rotate-12 transition-transform" />
+                <GraduationCap className="w-5 h-5 text-slate-200 group-hover:rotate-12 transition-transform" />
                 <span>
                   {expertApplication?.status === 'APPROVED' ? 'VÀO BÀN TÁC NGHIỆP CHUYÊN GIA' : 'XÉT DUYỆT CHUYÊN GIA NGAY'}
                 </span>
@@ -553,7 +553,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
           </div>
 
           {/* Badges Box */}
-          <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm space-y-3">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wide flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-amber-500" />
               Huy Hiệu Đạt Được ({profileData.badges?.length || 4})
@@ -578,7 +578,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
       </div>
 
       {/* SECTION: LỊCH SỬ TIN BÁO DÂN SINH ĐÃ GỬI */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+      <div className="bg-white rounded-lg p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
           <div>
             <span className="text-xs font-bold text-red-600 uppercase tracking-wider">
@@ -594,7 +594,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
         </div>
 
         {/* Filter controls: Lọc theo loại nhiệm vụ và trạng thái */}
-        <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-50 rounded-2xl border border-slate-200">
+        <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200">
           <div className="flex flex-wrap items-center gap-1.5 text-xs">
             <span className="font-bold text-slate-600 mr-1">Lọc theo loại tin:</span>
             <button
@@ -639,7 +639,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
               onClick={() => setStatusFilter('ALL')}
               className={`px-2.5 py-1 rounded-lg font-bold transition cursor-pointer ${
                 statusFilter === 'ALL'
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-slate-600 text-white'
                   : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
               }`}
             >
@@ -692,7 +692,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
                 <div
                   key={sub.id}
                   onClick={() => onSelectSubmission(sub)}
-                  className="p-4 rounded-2xl bg-slate-50 hover:bg-slate-100/80 border border-slate-200 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer group"
+                  className="p-4 rounded-lg bg-slate-50 hover:bg-slate-100/80 border border-slate-200 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer group"
                 >
                   <div className="space-y-1.5 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
@@ -751,7 +751,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
       {/* MODAL CHỈNH SỬA THÔNG TIN HỒ SƠ */}
       {isEditModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm animate-fade-in">
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden flex flex-col max-h-[90vh]">
+          <div className="bg-white rounded-lg border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden flex flex-col max-h-[90vh]">
             {/* Modal Header */}
             <div className="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
               <div className="flex items-center gap-2.5">
@@ -790,7 +790,7 @@ export const CitizenProfile: React.FC<CitizenProfileProps> = ({
                     <img
                       src={editAvatar}
                       alt="Xem trước ảnh"
-                      className="w-16 h-16 rounded-2xl object-cover border-2 border-amber-400 shadow-md"
+                      className="w-16 h-16 rounded-lg object-cover border-2 border-amber-400 shadow-md"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80';
                       }}

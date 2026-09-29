@@ -87,9 +87,9 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-slate-900 border-b border-slate-800 text-white shadow-lg">
+    <header className="sticky top-0 z-40 bg-ink border-b border-slate-800 text-white shadow-lg">
       {/* Top Banner Ticker */}
-      <div className="bg-red-700 text-white text-xs py-1.5 px-4">
+      <div className="bg-breaking text-white text-xs py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center space-x-2 font-medium">
             <span className="inline-flex items-center px-2 py-0.5 rounded bg-white text-red-700 text-[11px] font-bold tracking-wide uppercase">
@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onSelectRole('CITIZEN')}
             className="flex items-center space-x-3 cursor-pointer group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-amber-600 flex items-center justify-center shadow-md shadow-red-900/30 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-md bg-breaking flex items-center justify-center shadow-md shadow-red-900/30 group-hover:scale-[1.01] transition-all">
               <Flame className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -204,7 +204,7 @@ export const Header: React.FC<HeaderProps> = ({
                 {currentRole === 'CITIZEN' ? (
                   <Star className="w-3 h-3 fill-current text-amber-400" />
                 ) : currentRole === 'EXPERT' ? (
-                  <GraduationCap className="w-3 h-3 text-indigo-400" />
+                  <GraduationCap className="w-3 h-3 text-slate-400" />
                 ) : (
                   <UserIcon className="w-3 h-3 text-amber-400" />
                 )}
@@ -222,7 +222,7 @@ export const Header: React.FC<HeaderProps> = ({
                     {reputationScore}đ
                   </span>
                 ) : currentRole === 'EXPERT' ? (
-                  <span className="ml-1.5 px-1.5 py-0.2 rounded text-[10px] font-bold bg-indigo-500/30 text-indigo-300 border border-indigo-500/40">
+                  <span className="ml-1.5 px-1.5 py-0.2 rounded text-[10px] font-bold bg-slate-500/30 text-slate-300 border border-slate-500/40">
                     Chuyên gia
                   </span>
                 ) : (
@@ -281,7 +281,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <div className="px-3.5 py-2 border-b border-slate-800">
                     <div className="font-bold text-white">{currentUser.name}</div>
                     <div className="text-[11px] text-slate-400 truncate">{currentUser.email}</div>
-                    <div className="mt-1 inline-block px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-400 font-mono text-[10px]">
+                    <div className="mt-1 inline-block px-1.5 py-0.5 rounded bg-slate-500/20 text-slate-400 font-mono text-[10px]">
                       {currentUser.title || currentUser.role}
                     </div>
                   </div>
@@ -367,7 +367,7 @@ export const Header: React.FC<HeaderProps> = ({
                   title={r.desc}
                   className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap cursor-pointer text-xs ${
                     isActive
-                      ? 'bg-blue-600 text-white shadow-sm shadow-blue-900/50 font-semibold'
+                      ? 'bg-breaking text-white shadow-sm shadow-red-900/40 font-semibold'
                       : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-700/50'
                   }`}
                 >

@@ -192,8 +192,8 @@ export const EditProfileModal: React.FC<EditProfileModalProps> = ({
       case 'EDITOR':
         return {
           badge: 'Biên Tập Viên',
-          badgeColor: 'bg-blue-100 text-blue-800 border-blue-200',
-          icon: <ShieldCheck className="w-5 h-5 text-blue-600" />,
+          badgeColor: 'bg-slate-100 text-slate-800 border-slate-200',
+          icon: <ShieldCheck className="w-5 h-5 text-slate-600" />,
           desc: 'Quản trị hồ sơ BTV trực ban tiếp nhận, điều phối phóng viên & duyệt bài',
         };
       case 'REPORTER':
@@ -206,8 +206,8 @@ export const EditProfileModal: React.FC<EditProfileModalProps> = ({
       case 'DEPUTY_EIC':
         return {
           badge: 'Phó Tổng Biên Tập',
-          badgeColor: 'bg-purple-100 text-purple-800 border-purple-200',
-          icon: <Award className="w-5 h-5 text-purple-600" />,
+          badgeColor: 'bg-slate-100 text-slate-800 border-slate-200',
+          icon: <Award className="w-5 h-5 text-slate-600" />,
           desc: 'Quản trị hồ sơ Lãnh đạo phụ trách thẩm định chuyên môn & duyệt xuất bản',
         };
       case 'EIC':
@@ -231,11 +231,11 @@ export const EditProfileModal: React.FC<EditProfileModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="bg-white rounded-lg border border-slate-200 shadow-2xl max-w-xl w-full overflow-hidden flex flex-col max-h-[92vh]">
         {/* Header */}
         <div className="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/90">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-white shadow-sm border border-slate-200 flex items-center justify-center">
               {roleInfo.icon}
             </div>
             <div>
@@ -283,7 +283,7 @@ export const EditProfileModal: React.FC<EditProfileModalProps> = ({
                 <img
                   src={formData.avatar}
                   alt="Avatar"
-                  className="w-16 h-16 rounded-2xl object-cover border-2 border-slate-300 shadow-md"
+                  className="w-16 h-16 rounded-lg object-cover border-2 border-slate-300 shadow-md"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80';
                   }}

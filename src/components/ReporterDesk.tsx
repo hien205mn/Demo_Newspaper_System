@@ -335,7 +335,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
   return (
     <div className="space-y-6 pb-12">
       {/* Header Banner */}
-      <div className="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-md">
+      <div className="bg-slate-900 text-white rounded-lg p-6 border border-slate-800 shadow-md">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-xl bg-amber-600 flex items-center justify-center text-white shadow-lg">
@@ -393,7 +393,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Column: 2 Dedicated Tabs for CTV (Kiểm chứng & Viết bài) with Filters */}
         <div className="lg:col-span-4 space-y-4">
-          <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm space-y-3">
+          <div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm space-y-3">
             {/* Header info */}
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
               <span className="text-xs font-black uppercase text-slate-800 tracking-wider flex items-center gap-1.5">
@@ -412,14 +412,14 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                 onClick={() => handleTabChange('VERIFICATION')}
                 className={`py-2 px-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
                   activeTab === 'VERIFICATION'
-                    ? 'bg-blue-600 text-white shadow-sm'
+                    ? 'bg-slate-600 text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
                 }`}
               >
                 <Camera className="w-3.5 h-3.5" />
                 <span>1. Kiểm chứng</span>
                 <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono font-bold ${
-                  activeTab === 'VERIFICATION' ? 'bg-blue-800 text-white' : 'bg-slate-200 text-slate-700'
+                  activeTab === 'VERIFICATION' ? 'bg-slate-800 text-white' : 'bg-slate-200 text-slate-700'
                 }`}>
                   {verificationTasks.length}
                 </span>
@@ -506,7 +506,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                   <select
                     value={verifyStatusFilter}
                     onChange={(e: any) => setVerifyStatusFilter(e.target.value)}
-                    className="w-full p-2 bg-white border border-slate-300 rounded-lg text-xs font-semibold text-slate-800 outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full p-2 bg-white border border-slate-300 rounded-lg text-xs font-semibold text-slate-800 outline-none focus:ring-1 focus:ring-slate-500"
                   >
                     <option value="ALL">Tất cả trạng thái kiểm chứng ({verificationTasks.length})</option>
                     <option value="FIELD_ASSIGNED">1. Cần đi kiểm chứng ({verificationTasks.filter(s => s.stage === 'FIELD_ASSIGNED').length})</option>
@@ -550,7 +550,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                       className={`p-3 rounded-xl border transition cursor-pointer space-y-1.5 ${
                         isSelected
                           ? activeTab === 'VERIFICATION'
-                            ? 'bg-blue-50/80 border-blue-500 shadow-sm ring-1 ring-blue-400/50'
+                            ? 'bg-slate-50/80 border-slate-500 shadow-sm ring-1 ring-slate-400/50'
                             : 'bg-amber-50/80 border-amber-500 shadow-sm ring-1 ring-amber-400/50'
                           : 'bg-white border-slate-200 hover:border-slate-300'
                       }`}
@@ -565,7 +565,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                           </span>
                         </div>
                         {sub.stage === 'FIELD_ASSIGNED' && (
-                          <span className="font-bold text-blue-700 bg-blue-100 px-1.5 py-0.5 rounded border border-blue-200">
+                          <span className="font-bold text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200">
                             Cần kiểm chứng
                           </span>
                         )}
@@ -580,7 +580,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                           </span>
                         )}
                         {sub.stage === 'ARTICLE_SUBMITTED' && (
-                          <span className="font-bold text-purple-700 bg-purple-100 px-1.5 py-0.5 rounded border border-purple-200">
+                          <span className="font-bold text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200">
                             Đã nộp bài
                           </span>
                         )}
@@ -615,7 +615,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
         {/* Right Column: Field Workstation (Verification & Article Writing) */}
         <div className="lg:col-span-8">
           {activeSub ? (
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-6">
+            <div className="bg-white rounded-lg border border-slate-200 p-6 shadow-sm space-y-6">
               {/* Toast Message Notification */}
               {toastMessage && (
                 <div className="p-4 bg-emerald-600 text-white rounded-xl shadow-lg flex items-center justify-between text-xs font-bold animate-fade-in">
@@ -655,11 +655,11 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
               </div>
 
               {/* 3-STEP WORKFLOW PIPELINE PROGRESS BAR */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 p-2 bg-slate-100/90 rounded-2xl border border-slate-200">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 p-2 bg-slate-100/90 rounded-lg border border-slate-200">
                 {/* Bước 1 */}
                 <div className={`p-3 rounded-xl flex items-center gap-2.5 text-xs transition ${
                   !canWriteArticle && !isWaitingEditorDirective
-                    ? 'bg-blue-600 text-white font-black shadow-md ring-2 ring-blue-400/40'
+                    ? 'bg-slate-600 text-white font-black shadow-md ring-2 ring-slate-400/40'
                     : 'bg-white text-slate-700 font-bold border border-slate-200'
                 }`}>
                   <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 ${
@@ -760,18 +760,18 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
               {/* Hiển thị khi CTV mới nhận việc (FIELD_ASSIGNED) hoặc chưa gửi báo cáo       */}
               {/* ========================================================================= */}
               {!canWriteArticle && !isWaitingEditorDirective && (
-                <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-5 animate-fade-in">
+                <div className="p-5 sm:p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-5 animate-fade-in">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-2">
                     <div>
                       <h3 className="font-black text-slate-900 text-sm sm:text-base flex items-center gap-2">
-                        <Camera className="w-4 h-4 text-blue-600" />
+                        <Camera className="w-4 h-4 text-slate-600" />
                         XÁC THỰC & GỬI THÔNG TIN KIỂM CHỨNG HIỆN TRƯỜNG
                       </h3>
                       <p className="text-[11px] text-slate-500 mt-0.5">
                         Kiểm tra thực địa, phỏng vấn nhân chứng và đính kèm đầy đủ hình ảnh, video đối chứng.
                       </p>
                     </div>
-                    <span className="text-xs font-bold text-blue-700 bg-blue-100 px-2.5 py-1 rounded-full border border-blue-200 shrink-0">
+                    <span className="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200 shrink-0">
                       Giai đoạn: Kiểm chứng thực địa
                     </span>
                   </div>
@@ -784,7 +784,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                       <select
                         value={verifyStatus}
                         onChange={(e: any) => setVerifyStatus(e.target.value)}
-                        className="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-semibold text-slate-800 outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-semibold text-slate-800 outline-none focus:ring-2 focus:ring-slate-500"
                       >
                         <option value="CONFIRMED_TRUE">✓ Xác thực đúng 100% phản ánh</option>
                         <option value="EXAGGERATED">⚠ Phản ánh có phóng đại một phần</option>
@@ -801,7 +801,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                         min={0}
                         value={witnessCount}
                         onChange={(e) => setWitnessCount(Number(e.target.value))}
-                        className="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:ring-2 focus:ring-slate-500"
                       />
                     </div>
                   </div>
@@ -815,7 +815,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                       value={findingSummary}
                       onChange={(e) => setFindingSummary(e.target.value)}
                       placeholder="Mô tả cụ thể những gì CTV tận mắt chứng kiến tại hiện trường, làm việc với ai, hiện trạng tài sản/sức khỏe người dân ra sao..."
-                      className="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs leading-relaxed outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs leading-relaxed outline-none focus:ring-2 focus:ring-slate-500"
                     />
                   </div>
 
@@ -823,7 +823,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                   <div className="p-4 bg-white rounded-xl border border-slate-200 space-y-3">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-2 border-b border-slate-100 gap-2">
                       <div className="flex items-center gap-2">
-                        <Film className="w-4 h-4 text-purple-600" />
+                        <Film className="w-4 h-4 text-slate-600" />
                         <span className="text-xs font-black text-slate-900 uppercase">
                           Hồ Sơ Tư Liệu Hiện Trường: Hình Ảnh & Video ({evidenceAttachments.length}) *
                         </span>
@@ -839,9 +839,9 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                       <button
                         type="button"
                         onClick={() => imageInputRef.current?.click()}
-                        className="px-3 py-2 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-xl text-xs font-bold flex items-center gap-1.5 transition cursor-pointer"
+                        className="px-3 py-2 bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 rounded-xl text-xs font-bold flex items-center gap-1.5 transition cursor-pointer"
                       >
-                        <ImageIcon className="w-3.5 h-3.5 text-blue-600" />
+                        <ImageIcon className="w-3.5 h-3.5 text-slate-600" />
                         <span>+ Tải ảnh từ máy</span>
                       </button>
 
@@ -849,9 +849,9 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                       <button
                         type="button"
                         onClick={() => videoInputRef.current?.click()}
-                        className="px-3 py-2 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 rounded-xl text-xs font-bold flex items-center gap-1.5 transition cursor-pointer"
+                        className="px-3 py-2 bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 rounded-xl text-xs font-bold flex items-center gap-1.5 transition cursor-pointer"
                       >
-                        <Video className="w-3.5 h-3.5 text-purple-600" />
+                        <Video className="w-3.5 h-3.5 text-slate-600" />
                         <span>+ Tải video từ máy</span>
                       </button>
 
@@ -915,8 +915,8 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                               <span
                                 className={`absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-black uppercase shadow ${
                                   att.type === 'video'
-                                    ? 'bg-purple-600 text-white'
-                                    : 'bg-blue-600 text-white'
+                                    ? 'bg-slate-600 text-white'
+                                    : 'bg-slate-600 text-white'
                                 }`}
                               >
                                 {att.type === 'video' ? '🎥 Video hiện trường' : '📸 Ảnh đối chứng'}
@@ -942,7 +942,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                                 value={att.caption || ''}
                                 onChange={(e) => handleUpdateCaption(att.id, e.target.value)}
                                 placeholder="Ghi chú thích cho tư liệu này..."
-                                className="w-full px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-800 outline-none focus:ring-1 focus:ring-blue-500"
+                                className="w-full px-2 py-1 bg-white border border-slate-200 rounded text-xs text-slate-800 outline-none focus:ring-1 focus:ring-slate-500"
                               />
                             </div>
                           </div>
@@ -958,7 +958,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                     <button
                       type="button"
                       onClick={handleSubmitVerification}
-                      className="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl shadow-md transition cursor-pointer flex items-center justify-center gap-2"
+                      className="w-full sm:w-auto px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white text-xs font-bold rounded-xl shadow-md transition cursor-pointer flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       <span>NỘP BÁO CÁO KIỂM CHỨNG & TƯ LIỆU CHO BTV</span>
@@ -972,14 +972,14 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
               {/* Screen viết bài BỊ KHÓA, CTV không thể chuyển qua cho đến khi BTV yêu cầu  */}
               {/* ========================================================================= */}
               {isWaitingEditorDirective && (
-                <div className="p-6 bg-gradient-to-r from-blue-50 via-slate-50 to-amber-50 rounded-2xl border-2 border-blue-300 space-y-5 animate-fade-in">
-                  <div className="flex items-start sm:items-center gap-3.5 pb-4 border-b border-blue-200/80">
-                    <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                <div className="p-6 bg-gradient-to-r from-slate-50 via-slate-50 to-amber-50 rounded-lg border-2 border-slate-300 space-y-5 animate-fade-in">
+                  <div className="flex items-start sm:items-center gap-3.5 pb-4 border-b border-slate-200/80">
+                    <div className="w-12 h-12 rounded-lg bg-slate-600 text-white flex items-center justify-center shrink-0 shadow-md">
                       <Clock className="w-6 h-6 animate-spin" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase bg-blue-200 text-blue-900 border border-blue-300">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase bg-slate-200 text-slate-900 border border-slate-300">
                           ĐÃ NỘP BÁO CÁO KIỂM CHỨNG
                         </span>
                         <span className="text-xs font-mono font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">
@@ -998,7 +998,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                   {/* Summary of submitted verification */}
                   <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-3 text-xs">
                     <div className="flex items-center justify-between font-bold text-slate-900 border-b border-slate-100 pb-2">
-                      <span className="flex items-center gap-1.5 text-blue-700">
+                      <span className="flex items-center gap-1.5 text-slate-700">
                         <ShieldCheck className="w-4 h-4" />
                         Tóm tắt báo cáo kiểm chứng đã gửi:
                       </span>
@@ -1036,7 +1036,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                             <div key={att.id} className="relative rounded-lg overflow-hidden border border-slate-200 bg-slate-100 h-20">
                               {att.type === 'video' ? (
                                 <div className="w-full h-full flex flex-col items-center justify-center bg-slate-900 text-white text-[10px]">
-                                  <Video className="w-5 h-5 text-purple-400 mb-0.5" />
+                                  <Video className="w-5 h-5 text-slate-400 mb-0.5" />
                                   <span>Video MP4</span>
                                 </div>
                               ) : (
@@ -1089,7 +1089,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
               {/* Chỉ hiển thị khi BTV đã phát lệnh (ARTICLE_DRAFTING hoặc nộp lại bản thảo)   */}
               {/* ========================================================================= */}
               {canWriteArticle && (
-                <div className="p-5 sm:p-6 bg-white rounded-2xl border-2 border-emerald-400 shadow-md space-y-4 animate-fade-in">
+                <div className="p-5 sm:p-6 bg-white rounded-lg border-2 border-emerald-400 shadow-md space-y-4 animate-fade-in">
                   {/* Banner status: Drafting vs Submitted vs Published */}
                   {isPublished ? (
                     <div className="p-3.5 bg-emerald-50 rounded-xl border border-emerald-300 flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2">
@@ -1102,12 +1102,12 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                       </span>
                     </div>
                   ) : isArticleSubmitted ? (
-                    <div className="p-3.5 bg-purple-50 rounded-xl border border-purple-300 flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2">
-                      <div className="flex items-center gap-2 text-purple-900 font-bold">
-                        <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                    <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-300 flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2">
+                      <div className="flex items-center gap-2 text-slate-900 font-bold">
+                        <CheckCircle2 className="w-4 h-4 text-slate-600 shrink-0" />
                         <span>✓ BẢN THẢO BÀI VIẾT ĐÃ ĐƯỢC GỬI LÊN BAN BIÊN TẬP (VÒNG {activeSub.articleDraft?.revisionRound || 1})</span>
                       </div>
-                      <span className="text-[11px] font-mono text-purple-800 font-bold bg-white px-2 py-0.5 rounded border border-purple-200 self-start sm:self-auto">
+                      <span className="text-[11px] font-mono text-slate-800 font-bold bg-white px-2 py-0.5 rounded border border-slate-200 self-start sm:self-auto">
                         Đang chờ BTV & AI Review
                       </span>
                     </div>
@@ -1125,9 +1125,9 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
 
                   {/* BTV Directive Note (if any) */}
                   {activeSub.editorInitialNote && (
-                    <div className="p-3 bg-blue-50 rounded-xl border border-blue-200 text-xs text-blue-900 space-y-0.5">
-                      <span className="font-bold text-blue-950 block">Chỉ đạo định hướng từ Ban Biên Tập:</span>
-                      <p className="italic text-blue-800">
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-900 space-y-0.5">
+                      <span className="font-bold text-slate-950 block">Chỉ đạo định hướng từ Ban Biên Tập:</span>
+                      <p className="italic text-slate-800">
                         "{activeSub.editorInitialNote}"
                       </p>
                     </div>
@@ -1196,7 +1196,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
                       <div className="flex items-center gap-2 overflow-x-auto py-1">
                         {evidenceAttachments.map((att) => (
                           <div key={att.id} className="flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-slate-200 shrink-0 text-[11px]">
-                            {att.type === 'video' ? <Video className="w-3 h-3 text-purple-600" /> : <ImageIcon className="w-3 h-3 text-blue-600" />}
+                            {att.type === 'video' ? <Video className="w-3 h-3 text-slate-600" /> : <ImageIcon className="w-3 h-3 text-slate-600" />}
                             <span className="font-mono text-slate-600 truncate max-w-[120px]">{att.name}</span>
                           </div>
                         ))}
@@ -1221,7 +1221,7 @@ export const ReporterDesk: React.FC<ReporterDeskProps> = ({
               )}
             </div>
           ) : (
-            <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-400">
+            <div className="bg-white rounded-lg border border-slate-200 p-12 text-center text-slate-400">
               Chọn một nhiệm vụ bên trái để bắt đầu kiểm chứng hoặc viết bài
             </div>
           )}

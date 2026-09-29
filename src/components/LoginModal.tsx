@@ -26,7 +26,7 @@ export const DEMO_ACCOUNTS: (AuthUser & { passwordHint: string; description: str
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80',
     passwordHint: 'expert@123',
     description: 'Bình luận chuyên sâu, viết bài phân tích, theo dõi & chỉnh sửa bài viết',
-    icon: <GraduationCap className="w-5 h-5 text-indigo-500" />
+    icon: <GraduationCap className="w-5 h-5 text-slate-500" />
   },
   {
     id: 'user-btv-01',
@@ -37,7 +37,7 @@ export const DEMO_ACCOUNTS: (AuthUser & { passwordHint: string; description: str
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80',
     passwordHint: 'editor@123',
     description: 'Phân loại tin nóng, xác nhận người gửi, điều phối CTV, AI Review',
-    icon: <UserCheck className="w-5 h-5 text-blue-500" />
+    icon: <UserCheck className="w-5 h-5 text-slate-500" />
   },
   {
     id: 'user-ctv-04',
@@ -59,7 +59,7 @@ export const DEMO_ACCOUNTS: (AuthUser & { passwordHint: string; description: str
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80',
     passwordHint: 'deputy@123',
     description: 'Thẩm định chuyên môn bài viết, duyệt xuất bản hoặc chuyển cấp',
-    icon: <Award className="w-5 h-5 text-purple-500" />
+    icon: <Award className="w-5 h-5 text-slate-500" />
   },
   {
     id: 'user-eic-01',
@@ -145,7 +145,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm animate-fade-in">
-      <div className="bg-slate-900 border border-slate-700/80 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden text-white">
+      <div className="bg-slate-900 border border-slate-700/80 rounded-lg w-full max-w-lg shadow-2xl overflow-hidden text-white">
         {/* Header */}
         <div className="p-5 border-b border-slate-800 flex items-center justify-between bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900">
           <div className="flex items-center gap-3">
@@ -213,7 +213,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
                     onClick={() => handleSelectQuickAccount(acc)}
                     className={`w-full p-3 rounded-xl border text-left flex items-center justify-between transition cursor-pointer group ${
                       isCurrent
-                        ? 'bg-blue-950/40 border-blue-500/80 ring-1 ring-blue-500/30'
+                        ? 'bg-slate-950/40 border-slate-500/80 ring-1 ring-slate-500/30'
                         : 'bg-slate-800/70 border-slate-700/70 hover:bg-slate-800 hover:border-slate-600'
                     }`}
                   >
@@ -245,7 +245,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
 
                     <div className="flex items-center gap-2 pl-2 shrink-0">
                       {isCurrent ? (
-                        <span className="px-2 py-1 bg-blue-600 text-white text-[10px] font-bold rounded-lg flex items-center gap-1">
+                        <span className="px-2 py-1 bg-slate-600 text-white text-[10px] font-bold rounded-lg flex items-center gap-1">
                           <Check className="w-3 h-3" /> Đang dùng
                         </span>
                       ) : (

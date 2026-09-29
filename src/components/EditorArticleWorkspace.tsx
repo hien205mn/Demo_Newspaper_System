@@ -117,10 +117,10 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
         return {
           title: 'Chuyên Mục Bài Viết Từ Chuyên Gia & Học Giả',
           badge: 'CHUYÊN GIA & HỌC GIẢ',
-          badgeColor: 'bg-indigo-100 text-indigo-800 border-indigo-300',
+          badgeColor: 'bg-slate-100 text-slate-800 border-slate-300',
           desc: 'Các bài xã luận, phân tích chính sách, góc nhìn khoa học và phản biện độc lập từ các viện nghiên cứu, trường đại học, luật sư.',
-          icon: <GraduationCap className="w-5 h-5 text-indigo-600" />,
-          accentBg: 'bg-indigo-600',
+          icon: <GraduationCap className="w-5 h-5 text-slate-600" />,
+          accentBg: 'bg-slate-600',
         };
       case 'JOURNALIST':
         return {
@@ -142,11 +142,11 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
       case 'PENDING_REVIEW':
         return { label: 'Chờ thẩm định', color: 'bg-amber-100 text-amber-800 border-amber-300' };
       case 'EDITING':
-        return { label: 'Đang biên tập', color: 'bg-blue-100 text-blue-800 border-blue-300' };
+        return { label: 'Đang biên tập', color: 'bg-slate-100 text-slate-800 border-slate-300' };
       case 'REVISION_REQUESTED':
         return { label: 'Yêu cầu sửa bài', color: 'bg-orange-100 text-orange-800 border-orange-300' };
       case 'TRANSFERRED_TO_DEPUTY':
-        return { label: 'Đã chuyển Phó TBT', color: 'bg-purple-100 text-purple-800 border-purple-300' };
+        return { label: 'Đã chuyển Phó TBT', color: 'bg-slate-100 text-slate-800 border-slate-300' };
       case 'APPROVED':
         return { label: 'Đã duyệt xuất bản', color: 'bg-emerald-100 text-emerald-800 border-emerald-300' };
       case 'PUBLISHED':
@@ -233,10 +233,10 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
   return (
     <div className="space-y-6">
       {/* Screen Header Banner */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm">
+      <div className="bg-white rounded-lg p-6 sm:p-7 border border-slate-200 shadow-sm">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-md ${config.accentBg}`}>
+            <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-md ${config.accentBg}`}>
               {config.icon}
             </div>
             <div>
@@ -258,19 +258,19 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            <div className="bg-slate-50 p-2.5 rounded-2xl border border-slate-200 text-center min-w-[90px]">
+            <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-center min-w-[90px]">
               <div className="text-[10px] font-bold text-slate-400 uppercase">Chờ xử lý</div>
               <div className="text-lg font-black text-amber-600 font-mono">
                 {sourceArticles.filter((a) => a.status === 'PENDING_REVIEW' || a.status === 'EDITING').length}
               </div>
             </div>
-            <div className="bg-slate-50 p-2.5 rounded-2xl border border-slate-200 text-center min-w-[90px]">
+            <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-center min-w-[90px]">
               <div className="text-[10px] font-bold text-slate-400 uppercase">Trình lãnh đạo</div>
-              <div className="text-lg font-black text-purple-600 font-mono">
+              <div className="text-lg font-black text-slate-600 font-mono">
                 {sourceArticles.filter((a) => a.status === 'TRANSFERRED_TO_DEPUTY').length}
               </div>
             </div>
-            <div className="bg-slate-50 p-2.5 rounded-2xl border border-slate-200 text-center min-w-[90px]">
+            <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-center min-w-[90px]">
               <div className="text-[10px] font-bold text-slate-400 uppercase">Đã duyệt</div>
               <div className="text-lg font-black text-emerald-600 font-mono">
                 {sourceArticles.filter((a) => a.status === 'APPROVED' || a.status === 'PUBLISHED').length}
@@ -284,7 +284,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* LEFT COLUMN: Article Queue & Filters (4 cols) */}
         <div className="lg:col-span-4 space-y-4">
-          <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+          <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
                 Danh sách bài viết ({filteredArticles.length})
@@ -349,7 +349,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
           {/* Cards List */}
           <div className="space-y-3 max-h-[700px] overflow-y-auto pr-1">
             {filteredArticles.length === 0 ? (
-              <div className="p-8 text-center bg-white rounded-2xl border border-slate-200 text-slate-400 text-xs">
+              <div className="p-8 text-center bg-white rounded-lg border border-slate-200 text-slate-400 text-xs">
                 Không tìm thấy bài viết nào phù hợp bộ lọc.
               </div>
             ) : (
@@ -361,7 +361,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
                   <div
                     key={art.id}
                     onClick={() => setSelectedArticleId(art.id)}
-                    className={`p-4 rounded-2xl border transition-all cursor-pointer text-left shadow-sm ${
+                    className={`p-4 rounded-lg border transition-all cursor-pointer text-left shadow-sm ${
                       isSelected
                         ? 'bg-red-50/50 border-red-500 ring-2 ring-red-400/20 shadow-md'
                         : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50/60'
@@ -414,7 +414,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
         {/* RIGHT COLUMN: Active Article Workspace & Editor (8 cols) */}
         <div className="lg:col-span-8">
           {activeArticle ? (
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-7 space-y-6">
+            <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-6 sm:p-7 space-y-6">
               {/* Header Action Bar */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-slate-100">
                 <div className="flex items-center gap-2">
@@ -425,7 +425,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
                     {getStatusBadge(activeArticle.status).label}
                   </span>
                   {activeArticle.relatedSubmissionCode && (
-                    <span className="text-[11px] text-slate-500 bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-mono">
+                    <span className="text-[11px] text-slate-500 bg-slate-50 text-slate-700 px-2 py-0.5 rounded font-mono">
                       Khớp tin dân sinh: {activeArticle.relatedSubmissionCode}
                     </span>
                   )}
@@ -457,7 +457,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
                     <button
                       type="button"
                       onClick={handleTransferToDeputy}
-                      className="px-3.5 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
+                      className="px-3.5 py-1.5 bg-slate-600 hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
                       title="Chuyển lên Phó Tổng Biên Tập duyệt xuất bản"
                     >
                       <Send className="w-3.5 h-3.5" />
@@ -509,12 +509,12 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
               </div>
 
               {/* Author & Verification Card */}
-              <div className="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="bg-slate-50 p-4 sm:p-5 rounded-lg border border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-start sm:items-center gap-3.5">
                   <img
                     src={activeArticle.authorAvatar}
                     alt={activeArticle.authorName}
-                    className="w-12 h-12 rounded-2xl object-cover border-2 border-white shadow-sm shrink-0"
+                    className="w-12 h-12 rounded-lg object-cover border-2 border-white shadow-sm shrink-0"
                   />
                   <div>
                     <div className="flex items-center gap-2">
@@ -556,7 +556,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
 
               {/* Fact Check & Peer Review Banner */}
               {activeArticle.factCheckNotes && (
-                <div className="bg-emerald-50 border border-emerald-200/80 rounded-2xl p-3.5 flex items-start gap-3 text-xs text-emerald-900">
+                <div className="bg-emerald-50 border border-emerald-200/80 rounded-lg p-3.5 flex items-start gap-3 text-xs text-emerald-900">
                   <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
                     <span className="font-black text-emerald-950">
@@ -571,7 +571,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
 
               {/* Revision Request Banner (if any) */}
               {activeArticle.status === 'REVISION_REQUESTED' && activeArticle.revisionRequestNote && (
-                <div className="bg-orange-50 border border-orange-200 rounded-2xl p-4 text-xs text-orange-900 space-y-1">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 text-xs text-orange-900 space-y-1">
                   <div className="font-bold flex items-center gap-1.5 text-orange-950">
                     <AlertCircle className="w-4 h-4 text-orange-600" />
                     <span>Yêu cầu chỉnh sửa gửi tác giả:</span>
@@ -616,7 +616,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
                       className="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl text-xs sm:text-sm font-medium text-slate-900 focus:ring-2 focus:ring-red-500 outline-none leading-relaxed"
                     />
                   ) : (
-                    <p className="text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-2xl border-l-4 border-red-600">
+                    <p className="text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-lg border-l-4 border-red-600">
                       {activeArticle.sapo}
                     </p>
                   )}
@@ -632,7 +632,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
                       rows={14}
                       value={editedContent}
                       onChange={(e) => setEditedContent(e.target.value)}
-                      className="w-full p-4 bg-slate-50 border border-slate-300 rounded-2xl text-xs sm:text-sm font-normal text-slate-900 focus:ring-2 focus:ring-red-500 outline-none leading-relaxed font-serif"
+                      className="w-full p-4 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm font-normal text-slate-900 focus:ring-2 focus:ring-red-500 outline-none leading-relaxed font-serif"
                     />
                   ) : (
                     <div className="prose prose-slate max-w-none text-xs sm:text-sm text-slate-800 leading-relaxed whitespace-pre-line font-serif bg-white p-2">
@@ -649,7 +649,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {activeArticle.attachments.map((att) => (
-                        <div key={att.id} className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm">
+                        <div key={att.id} className="rounded-lg overflow-hidden border border-slate-200 bg-slate-50 shadow-sm">
                           <img
                             src={att.url}
                             alt={att.caption}
@@ -681,7 +681,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
                   </div>
 
                   {/* Nhuận bút */}
-                  <div className="bg-amber-50/50 p-4 rounded-2xl border border-amber-200/80 space-y-2">
+                  <div className="bg-amber-50/50 p-4 rounded-lg border border-amber-200/80 space-y-2">
                     <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900">
                       <Coins className="w-4 h-4 text-amber-600" />
                       <span>Định Mức Nhuận Bút Tòa Soạn</span>
@@ -746,7 +746,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
               </div>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl border border-slate-200 p-12 text-center text-slate-400">
+            <div className="bg-white rounded-lg border border-slate-200 p-12 text-center text-slate-400">
               Vui lòng chọn một bài viết từ danh sách bên trái để biên tập.
             </div>
           )}
@@ -756,7 +756,7 @@ export const EditorArticleWorkspace: React.FC<EditorArticleWorkspaceProps> = ({
       {/* Modal: Yêu cầu sửa bài */}
       {isRevisionModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fade-in">
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-lg w-full p-6 space-y-4">
+          <div className="bg-white rounded-lg border border-slate-200 shadow-2xl max-w-lg w-full p-6 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2 text-orange-600 font-bold text-sm">
                 <RotateCcw className="w-4 h-4" />

@@ -180,11 +180,11 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
   return (
     <div className="space-y-6 pb-12">
       {/* Header Banner */}
-      <div className="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-md">
+      <div className="bg-slate-900 text-white rounded-lg p-6 border border-slate-800 shadow-md">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg ${
-              isEIC ? 'bg-red-600' : 'bg-indigo-600'
+              isEIC ? 'bg-red-600' : 'bg-slate-600'
             }`}>
               <Award className="w-6 h-6" />
             </div>
@@ -194,7 +194,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
                   {isEIC ? 'PHÒNG TỔNG BIÊN TẬP (EIC OFFICE)' : 'PHÒNG PHÓ TỔNG BIÊN TẬP (DEPUTY EIC)'}
                 </h1>
                 <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase border ${
-                  isEIC ? 'bg-red-500/20 text-red-300 border-red-500/30' : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'
+                  isEIC ? 'bg-red-500/20 text-red-300 border-red-500/30' : 'bg-slate-500/20 text-slate-300 border-slate-500/30'
                 }`}>
                   {isEIC ? 'QUYỀN PHÊ DUYỆT TỐI CAO' : 'KIỂM DUYỆT CHUYÊN MÔN'}
                 </span>
@@ -234,12 +234,12 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left List */}
         <div className="lg:col-span-4 space-y-3">
-          <div className="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+          <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm space-y-3">
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
               <span className="text-xs font-bold text-slate-900 uppercase tracking-wide">
                 Hàng đợi kiểm duyệt
               </span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-indigo-100 text-indigo-700 font-mono">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-slate-100 text-slate-700 font-mono">
                 {queue.length} hồ sơ
               </span>
             </div>
@@ -324,7 +324,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
 
           <div className="space-y-2.5 max-h-[640px] overflow-y-auto pr-1">
             {queue.length === 0 ? (
-              <div className="p-8 bg-white rounded-2xl border border-slate-200 text-center text-slate-400 space-y-2">
+              <div className="p-8 bg-white rounded-lg border border-slate-200 text-center text-slate-400 space-y-2">
                 <p className="text-xs">Không có hồ sơ nào phù hợp bộ lọc.</p>
                 <button
                   type="button"
@@ -333,7 +333,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
                     setPriorityFilter('ALL');
                     setStatusFilter('ALL');
                   }}
-                  className="px-3 py-1 bg-indigo-600 text-white rounded-lg text-xs font-bold shadow"
+                  className="px-3 py-1 bg-slate-600 text-white rounded-lg text-xs font-bold shadow"
                 >
                   Đặt lại bộ lọc
                 </button>
@@ -353,7 +353,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
                   }}
                   className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
                     isSelected
-                      ? 'bg-white border-indigo-500 ring-2 ring-indigo-500/20 shadow-md'
+                      ? 'bg-white border-slate-500 ring-2 ring-slate-500/20 shadow-md'
                       : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
                   }`}
                 >
@@ -377,7 +377,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
 
                   <div className="flex items-center justify-between text-[11px] text-slate-500 mt-2">
                     <span className="truncate">{sub.province}</span>
-                    <span className="text-[10px] font-semibold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded">
+                    <span className="text-[10px] font-semibold text-slate-700 bg-slate-50 px-1.5 py-0.5 rounded">
                       {sub.stage}
                     </span>
                   </div>
@@ -390,7 +390,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
         {/* Right Detail */}
         <div className="lg:col-span-8">
           {selectedSub ? (
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-6">
+            <div className="bg-white rounded-lg border border-slate-200 p-6 shadow-sm space-y-6">
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
                 <div>
@@ -421,7 +421,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
                 <div className="p-5 bg-slate-50 rounded-xl border border-slate-300 space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-slate-200">
                     <span className="text-xs font-bold text-slate-700 uppercase flex items-center gap-1.5">
-                      <FileText className="w-4 h-4 text-indigo-600" />
+                      <FileText className="w-4 h-4 text-slate-600" />
                       Nội dung bản thảo bài viết báo chí
                     </span>
                     <span className="text-xs text-slate-500">
@@ -433,7 +433,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
                     <h3 className="text-base font-black text-slate-900">
                       {selectedSub.articleDraft.title}
                     </h3>
-                    <p className="text-xs font-semibold text-slate-700 italic border-l-3 border-indigo-500 pl-3 leading-relaxed">
+                    <p className="text-xs font-semibold text-slate-700 italic border-l-3 border-slate-500 pl-3 leading-relaxed">
                       {selectedSub.articleDraft.sapo}
                     </p>
                     <div className="text-xs text-slate-800 whitespace-pre-line leading-relaxed pt-2 border-t border-slate-100">
@@ -449,13 +449,13 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
 
               {/* AI REVIEW SUMMARY (GEMINI FLASH) */}
               {selectedSub.aiReview && (
-                <div className="p-4 bg-purple-50/80 rounded-xl border border-purple-200 space-y-2 text-xs">
+                <div className="p-4 bg-slate-50/80 rounded-xl border border-slate-200 space-y-2 text-xs">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-purple-900 flex items-center gap-1.5">
-                      <Sparkles className="w-4 h-4 text-purple-600" />
+                    <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                      <Sparkles className="w-4 h-4 text-slate-600" />
                       Đánh Giá Hỗ Trợ Của Hệ Thống AI (Gemini)
                     </span>
-                    <span className="font-bold text-purple-700">
+                    <span className="font-bold text-slate-700">
                       Độ tin cậy: {selectedSub.aiReview.factualConsistencyScore}%
                     </span>
                   </div>
@@ -530,7 +530,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
                   value={leadershipNote}
                   onChange={(e) => setLeadershipNote(e.target.value)}
                   placeholder="Ghi rõ ý kiến chỉ đạo, định hướng thông tin hoặc yêu cầu lưu ý..."
-                  className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500"
                 />
               </div>
 
@@ -561,7 +561,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
                       {(selectedSub.priority === 'HIGH' || selectedSub.priority === 'BREAKING') && (
                         <button
                           onClick={() => handleDeputyDecision('ESCALATE')}
-                          className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow"
+                          className="px-5 py-2.5 bg-slate-600 hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow"
                         >
                           <ArrowUpRight className="w-4 h-4" />
                           <span>Thẩm Định & Escalate Lên Tổng Biên Tập (EIC)</span>
@@ -590,7 +590,7 @@ export const LeadershipDesk: React.FC<LeadershipDeskProps> = ({
               </div>
             </div>
           ) : (
-            <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-400">
+            <div className="bg-white rounded-lg border border-slate-200 p-12 text-center text-slate-400">
               Chọn một vụ việc trong danh sách để thẩm định
             </div>
           )}

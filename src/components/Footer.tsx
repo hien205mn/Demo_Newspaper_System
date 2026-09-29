@@ -16,9 +16,9 @@ import {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 text-xs">
+    <footer className="bg-ink text-slate-300 border-t border-slate-800 text-xs">
       {/* Top emergency announcement bar in footer */}
-      <div className="bg-red-950/70 border-b border-red-900/50 py-3 px-4 sm:px-6">
+      <div className="bg-breaking border-b border-red-800 py-3 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-red-200">
           <div className="flex items-center gap-2 text-center sm:text-left">
             <span className="p-1 rounded bg-red-600 text-white font-black text-[10px] uppercase tracking-wider">
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
           {/* Column 1: Cơ quan chủ quản & Giấy phép */}
           <div className="space-y-3.5">
             <div className="flex items-center space-x-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-red-600 to-amber-600 flex items-center justify-center text-white shadow-md">
+              <div className="w-9 h-9 rounded-md bg-breaking flex items-center justify-center text-white shadow-md">
                 <Flame className="w-5 h-5" />
               </div>
               <div>
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
           {/* Column 3: Trụ sở & Mạng lưới văn phòng */}
           <div className="space-y-3.5">
             <div className="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wide border-b border-slate-800 pb-2">
-              <Building2 className="w-4 h-4 text-blue-400" />
+              <Building2 className="w-4 h-4 text-slate-400" />
               <span>Trụ Sở & Văn Phòng Đại Diện</span>
             </div>
 
@@ -128,7 +128,7 @@ export const Footer: React.FC = () => {
 
               <div>
                 <div className="text-white font-bold flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                   <span>Cơ quan đại diện phía Nam (TP.HCM):</span>
                 </div>
                 <p className="text-slate-400 pl-5 mt-0.5">
@@ -190,7 +190,7 @@ export const Footer: React.FC = () => {
               </li>
 
               <li className="flex items-start gap-2">
-                <Clock className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
+                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-slate-400">Thời gian tiếp công dân: </span>
                   <span className="text-slate-200">Từ 08:00 - 17:00 (Thứ 2 đến Thứ 6)</span>

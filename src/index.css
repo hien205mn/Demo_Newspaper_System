@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+@theme {
+	--color-ink: #0F172A;
+	--color-breaking: #DC2626;
+}
+
+:root {
+	color-scheme: light;
+	font-family: "Segoe UI", "Segoe UI Variable", Tahoma, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #f4f6f8;
+	color: #0F172A;
+}
+
+h1 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	background: #f4f6f8;
+}
+
+::selection {
+	background: #DC2626;
+	color: white;
+}
+
+:focus-visible {
+	outline: 2px solid #DC2626;
+	outline-offset: 2px;
+}
+
+button:not(:disabled) {
+	transition: filter 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+button:not(:disabled):hover {
+	filter: brightness(1.12);
+	transform: scale(1.03);
+	box-shadow: 0 8px 20px rgb(15 23 42 / 18%);
+}
+
+button:not(:disabled):active {
+	filter: brightness(1.2);
+	transform: scale(0.98);
+}
+
+button:not(:disabled):focus-visible {
+	filter: brightness(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	button:not(:disabled) {
+		transition: none;
+	}
+
+	button:not(:disabled):hover,
+	button:not(:disabled):active {
+		transform: none;
+	}
+}

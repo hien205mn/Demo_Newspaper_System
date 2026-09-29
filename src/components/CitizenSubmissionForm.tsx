@@ -279,7 +279,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
 
       {/* Success Modal / Banner when submitted */}
       {submittedResult ? (
-        <div className="bg-white rounded-2xl p-8 border border-emerald-200 shadow-xl text-center max-w-2xl mx-auto animate-fade-in">
+        <div className="bg-white rounded-lg p-8 border border-emerald-200 shadow-xl text-center max-w-2xl mx-auto animate-fade-in">
           <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
             <CheckCircle2 className="w-10 h-10" />
           </div>
@@ -326,7 +326,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
                 const event = new CustomEvent('app:switch-role', { detail: 'EDITOR' });
                 window.dispatchEvent(event);
               }}
-              className="w-full sm:w-auto px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition cursor-pointer shadow-md"
+              className="w-full sm:w-auto px-5 py-2.5 bg-slate-600 hover:bg-slate-700 text-white rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition cursor-pointer shadow-md"
             >
               <span>Xem BTV Tiếp Nhận & Xử Lý Tin Này</span>
               <ExternalLink className="w-4 h-4" />
@@ -336,7 +336,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
       ) : (
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Hero Form Header */}
-          <div className="bg-gradient-to-r from-red-600 via-red-700 to-amber-700 rounded-2xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+          <div className="bg-gradient-to-r from-red-600 via-red-700 to-amber-700 rounded-lg p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
             <div className="relative z-10 max-w-3xl">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/25 text-amber-200 text-xs font-bold uppercase tracking-wider mb-3">
                 <Flame className="w-4 h-4 text-amber-400 animate-pulse" />
@@ -353,7 +353,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
           </div>
 
           {/* SECTION 1: MEDIA UPLOAD */}
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-lg bg-red-100 text-red-700 flex items-center justify-center font-bold text-sm">
@@ -467,9 +467,9 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
           </div>
 
           {/* SECTION 2: LOCATION & TIME */}
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm space-y-4">
             <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm">
                 2
               </div>
               <div>
@@ -597,7 +597,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
           </div>
 
           {/* SECTION 3: PRELIMINARY REPORT */}
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm space-y-4">
             <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100">
               <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-sm">
                 3
@@ -765,7 +765,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
           </div>
 
           {/* SECTION 4: IMPACT SCORE EVALUATION MATRIX (TICK CHỌN BẰNG RADIO) */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border-2 border-red-500/30 shadow-lg space-y-6">
+          <div className="bg-white rounded-lg p-6 sm:p-8 border-2 border-red-500/30 shadow-lg space-y-6">
             <div className="border-b border-slate-200 pb-4">
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2.5">
@@ -802,7 +802,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
                     </span>
                     Khu vực xảy ra (Location Scope)
                   </h4>
-                  <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200">
+                  <span className="text-xs font-bold text-slate-700 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200">
                     Đã chọn: +{locationScore} điểm
                   </span>
                 </div>
@@ -815,7 +815,7 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
                         key={opt.value}
                         className={`flex items-start gap-3 p-3 rounded-xl border transition-all cursor-pointer ${
                           isSelected
-                            ? 'bg-blue-50/80 border-blue-500 shadow-sm'
+                            ? 'bg-slate-50/80 border-slate-500 shadow-sm'
                             : 'bg-white border-slate-200 hover:border-slate-300'
                         }`}
                       >
@@ -825,14 +825,14 @@ export const CitizenSubmissionForm: React.FC<CitizenSubmissionFormProps> = ({
                           value={opt.value}
                           checked={isSelected}
                           onChange={() => setLocationScore(opt.value)}
-                          className="w-4 h-4 text-blue-600 mt-1 focus:ring-blue-500 cursor-pointer"
+                          className="w-4 h-4 text-slate-600 mt-1 focus:ring-slate-500 cursor-pointer"
                         />
                         <div className="flex-1">
                           <div className="flex items-center justify-between">
                             <span className="font-bold text-xs text-slate-900">
                               {opt.label}
                             </span>
-                            <span className="text-[11px] font-black text-blue-600 bg-blue-100/60 px-1.5 py-0.5 rounded">
+                            <span className="text-[11px] font-black text-slate-600 bg-slate-100/60 px-1.5 py-0.5 rounded">
                               {opt.sublabel}
                             </span>
                           </div>
